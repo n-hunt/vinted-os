@@ -6,7 +6,7 @@ VintedOS automates the processing of Vinted shipping labels: fetching emails fro
 
 ---
 
-## Installation
+## Dependency Installation
 
 **Recommended: Install from source**
 ```bash
@@ -52,6 +52,13 @@ cp .env.example .env
 ```
 
 Get a free API key from: [Google AI Studio](https://aistudio.google.com/app/apikey)
+
+**Optional: Change LLM Model**
+```bash
+python setup.py --model gemini-2.5-flash   # Switch to different model
+```
+
+Default model is `gemini-3-flash-preview`. Other options: `gemini-2.5-flash`, `gemini-2.5-pro`, `gemini-1.5-flash`, etc.
 
 ### Step 2: Choose Your Demo
 
@@ -136,6 +143,23 @@ The demo database contains **15 comprehensive transactions** with:
 - **Total revenue**: £1,100+
 
 All data is safe, isolated, and production-identical in structure.
+
+### Inspect the Database Yourself
+
+Want to explore the demo database directly? You can use any SQLite viewer:
+
+**DBeaver Community (Recommended)**
+- Download: [dbeaver.io/download](https://dbeaver.io/download)
+- Open the database file at `data/demo_knowledge_base/demo.db`
+- Browse all tables, relationships, and data
+- Execute custom SQL queries
+
+**Alternative Tools**
+- **SQLite Online**: [sqliteonline.com](https://sqliteonline.com) - No installation needed
+- **VS Code**: Install "SQLite Viewer" extension
+- **Command Line**: `sqlite3 data/demo_knowledge_base/demo.db`
+
+This allows you to verify the data structure, review transaction details, and understand the complete schema independent of the RAG agent.
 
 ---
 
@@ -227,9 +251,9 @@ vinted-os-db/
 | Component | Technology |
 |-----------|------------|
 | **Language** | Python 3.11+ |
-| **LLM** | Google Gemini 3 Flash (Preview) |
+| **LLM** | Google Gemini 3 Flash (Preview); Can be configured differently|
 | **Frameworks** | LangChain, LangGraph |
-| **Database** | SQLite + SQLModel |
+| **Database** | SQLite|
 | **Vector Store** | Qdrant |
 | **PDF Processing** | PyMuPDF, Pillow, ReportLab |
 | **APIs** | Gmail API, Google AI |
@@ -347,5 +371,4 @@ This is a portfolio project demonstrating full-stack AI integration with product
 
 ---
 
-**Ready to explore?**  python agent.py --demo
 
