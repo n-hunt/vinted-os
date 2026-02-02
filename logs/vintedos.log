@@ -1,0 +1,1691 @@
+2026-01-29 20:41:34 - src.logging_config - INFO - ============================================================
+2026-01-29 20:41:34 - src.logging_config - INFO - VintedOS Logging Initialized
+2026-01-29 20:41:34 - src.logging_config - INFO - Log Level: INFO
+2026-01-29 20:41:34 - src.logging_config - INFO - Console Handler: True
+2026-01-29 20:41:34 - src.logging_config - INFO - File Handler: True
+2026-01-29 20:41:34 - src.logging_config - INFO - ============================================================
+2026-01-29 20:44:28 - src.logging_config - INFO - ============================================================
+2026-01-29 20:44:28 - src.logging_config - INFO - VintedOS Logging Initialized
+2026-01-29 20:44:28 - src.logging_config - INFO - Log Level: INFO
+2026-01-29 20:44:28 - src.logging_config - INFO - Console Handler: True
+2026-01-29 20:44:28 - src.logging_config - INFO - File Handler: True
+2026-01-29 20:44:28 - src.logging_config - INFO - ============================================================
+2026-01-29 20:45:34 - src.logging_config - INFO - ============================================================
+2026-01-29 20:45:34 - src.logging_config - INFO - VintedOS Logging Initialized
+2026-01-29 20:45:34 - src.logging_config - INFO - Log Level: INFO
+2026-01-29 20:45:34 - src.logging_config - INFO - Console Handler: True
+2026-01-29 20:45:34 - src.logging_config - INFO - File Handler: True
+2026-01-29 20:45:34 - src.logging_config - INFO - ============================================================
+2026-01-29 20:45:35 - src.main - INFO - Initializing VintedOS Pipeline
+2026-01-29 20:45:35 - src.services.database - INFO - Database engine initialized: vinted_os.db
+2026-01-29 20:45:35 - src.services.database - INFO - Database tables created/verified
+2026-01-29 20:45:35 - src.services.database - INFO - WAL mode enabled successfully
+2026-01-29 20:45:35 - src.services.printer - INFO - Dry-run mode enabled. PDFs will be saved to: logs/print_debug
+2026-01-29 20:45:35 - src.services.database - INFO - Started pipeline run 1
+2026-01-29 20:45:35 - src.main - INFO - Pipeline initialized (dry_run=True, run_id=1)
+2026-01-29 20:45:35 - src.main - INFO - ============================================================
+2026-01-29 20:45:35 - src.main - INFO - Starting VintedOS ETL Pipeline
+2026-01-29 20:45:35 - src.main - INFO - ============================================================
+2026-01-29 20:45:35 - src.main - INFO - 
+=== Step 1: Processing Return Forms ===
+2026-01-29 20:45:35 - src.services.gmail - INFO - Initializing Gmail API service
+2026-01-29 20:45:35 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-01-29 20:45:35 - src.services.gmail - INFO - Gmail API service initialized successfully
+2026-01-29 20:45:35 - src.services.gmail - INFO - Searching for messages: query='has:attachment filename:pdf', pattern='^Order-return-form'
+2026-01-29 20:45:36 - src.services.gmail - INFO - Found 8 matching attachment(s)
+2026-01-29 20:45:36 - src.main - INFO - Found 8 return form attachment(s)
+2026-01-29 20:45:36 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:36 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:36 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:36 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:36 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:36 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:36 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:36 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:36 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:36 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:36 - src.docuflow.parser - INFO - Parsed 1 items from text (TID: 14880032282)
+2026-01-29 20:45:36 - src.docuflow.parser - INFO - PDF parsing complete: TID=14880032282, Items=1
+2026-01-29 20:45:36 - src.main - INFO - Parsed return form for TID 14880032282: 1 item(s)
+2026-01-29 20:45:36 - src.services.database - INFO - Created transaction 14880032282 (DB ID: 1) with 1 items
+2026-01-29 20:45:36 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:36 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:36 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:36 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:36 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:36 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:36 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:36 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:36 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:36 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:36 - src.docuflow.parser - INFO - Parsed 1 items from text (TID: 16367964766)
+2026-01-29 20:45:36 - src.docuflow.parser - INFO - PDF parsing complete: TID=16367964766, Items=1
+2026-01-29 20:45:36 - src.main - INFO - Parsed return form for TID 16367964766: 1 item(s)
+2026-01-29 20:45:36 - src.services.database - INFO - Created transaction 16367964766 (DB ID: 2) with 1 items
+2026-01-29 20:45:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:37 - src.docuflow.parser - INFO - Parsed 1 items from text (TID: 16371762056)
+2026-01-29 20:45:37 - src.docuflow.parser - INFO - PDF parsing complete: TID=16371762056, Items=1
+2026-01-29 20:45:37 - src.main - INFO - Parsed return form for TID 16371762056: 1 item(s)
+2026-01-29 20:45:37 - src.services.database - INFO - Created transaction 16371762056 (DB ID: 3) with 1 items
+2026-01-29 20:45:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:37 - src.docuflow.parser - INFO - Parsed 1 items from text (TID: 16390174926)
+2026-01-29 20:45:37 - src.docuflow.parser - INFO - PDF parsing complete: TID=16390174926, Items=1
+2026-01-29 20:45:37 - src.main - INFO - Parsed return form for TID 16390174926: 1 item(s)
+2026-01-29 20:45:37 - src.services.database - INFO - Created transaction 16390174926 (DB ID: 4) with 1 items
+2026-01-29 20:45:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:37 - src.docuflow.parser - INFO - Parsed 1 items from text (TID: 16399838501)
+2026-01-29 20:45:37 - src.docuflow.parser - INFO - PDF parsing complete: TID=16399838501, Items=1
+2026-01-29 20:45:37 - src.main - INFO - Parsed return form for TID 16399838501: 1 item(s)
+2026-01-29 20:45:37 - src.services.database - INFO - Created transaction 16399838501 (DB ID: 5) with 1 items
+2026-01-29 20:45:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:37 - src.docuflow.parser - INFO - Parsed 1 items from text (TID: 16405895353)
+2026-01-29 20:45:37 - src.docuflow.parser - INFO - PDF parsing complete: TID=16405895353, Items=1
+2026-01-29 20:45:37 - src.main - INFO - Parsed return form for TID 16405895353: 1 item(s)
+2026-01-29 20:45:37 - src.services.database - INFO - Created transaction 16405895353 (DB ID: 6) with 1 items
+2026-01-29 20:45:38 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:38 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:38 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:38 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:38 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:38 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:38 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:38 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:38 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:38 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:38 - src.docuflow.parser - INFO - Parsed 1 items from text (TID: 16413326734)
+2026-01-29 20:45:38 - src.docuflow.parser - INFO - PDF parsing complete: TID=16413326734, Items=1
+2026-01-29 20:45:38 - src.main - INFO - Parsed return form for TID 16413326734: 1 item(s)
+2026-01-29 20:45:38 - src.services.database - INFO - Created transaction 16413326734 (DB ID: 7) with 1 items
+2026-01-29 20:45:38 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:38 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:38 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:38 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:38 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:38 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:38 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:38 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:38 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:38 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:45:38 - src.docuflow.parser - INFO - Parsed 1 items from text (TID: 16444339295)
+2026-01-29 20:45:38 - src.docuflow.parser - INFO - PDF parsing complete: TID=16444339295, Items=1
+2026-01-29 20:45:38 - src.main - INFO - Parsed return form for TID 16444339295: 1 item(s)
+2026-01-29 20:45:38 - src.services.database - INFO - Created transaction 16444339295 (DB ID: 8) with 1 items
+2026-01-29 20:45:38 - src.main - INFO - Parsed 8 return form(s)
+2026-01-29 20:45:38 - src.main - INFO - 
+=== Step 2: Processing Shipping Labels ===
+2026-01-29 20:45:38 - src.services.gmail - INFO - Searching for messages: query='has:attachment filename:pdf subject:'shipping label'', pattern='^Vinted-(?:Label|Digital-Label)'
+2026-01-29 20:45:38 - src.services.gmail - INFO - Found 6 matching attachment(s)
+2026-01-29 20:45:38 - src.main - INFO - Found 6 shipping label(s)
+2026-01-29 20:45:39 - src.docuflow.vision - INFO - Successfully processed PDF: 21043 -> 11619 bytes
+2026-01-29 20:45:39 - src.main - INFO - Processed label for TID 16399838501
+2026-01-29 20:45:39 - src.docuflow.vision - INFO - Successfully processed PDF: 20380 -> 10554 bytes
+2026-01-29 20:45:39 - src.main - INFO - Processed label for TID 16413326734
+2026-01-29 20:45:39 - src.docuflow.vision - INFO - Successfully processed PDF: 29328 -> 9152 bytes
+2026-01-29 20:45:39 - src.main - INFO - Processed label for TID 16390174926
+2026-01-29 20:45:40 - src.docuflow.vision - INFO - Successfully processed PDF: 21033 -> 11815 bytes
+2026-01-29 20:45:40 - src.main - INFO - Processed label for TID 16405895353
+2026-01-29 20:45:40 - src.docuflow.vision - INFO - Successfully processed PDF: 20874 -> 11507 bytes
+2026-01-29 20:45:40 - src.main - INFO - Processed label for TID 16371762056
+2026-01-29 20:45:40 - src.docuflow.vision - INFO - Successfully processed PDF: 20735 -> 10924 bytes
+2026-01-29 20:45:40 - src.main - INFO - Processed label for TID 16367964766
+2026-01-29 20:45:40 - src.main - INFO - Processed 6 shipping label(s)
+2026-01-29 20:45:40 - src.main - INFO - 
+=== Step 3: Matching and Generating Labels ===
+2026-01-29 20:45:40 - src.docuflow.generator - INFO - Generated label with items overlay for TID 16399838501 (1 item(s))
+2026-01-29 20:45:40 - src.main - INFO - Saved enhanced label: static/services/labels/16399838501_Vinted-Label-16399838501.pdf
+2026-01-29 20:45:40 - src.main - INFO - Matched transaction 16399838501: 1 item(s), 2 message(s)
+2026-01-29 20:45:40 - src.docuflow.generator - INFO - Generated label with items overlay for TID 16413326734 (1 item(s))
+2026-01-29 20:45:40 - src.main - INFO - Saved enhanced label: static/services/labels/16413326734_Vinted-Label-16413326734.pdf
+2026-01-29 20:45:40 - src.main - INFO - Matched transaction 16413326734: 1 item(s), 2 message(s)
+2026-01-29 20:45:40 - src.docuflow.generator - INFO - Generated label with items overlay for TID 16390174926 (1 item(s))
+2026-01-29 20:45:40 - src.main - INFO - Saved enhanced label: static/services/labels/16390174926_Vinted-Digital-Label-16390174926.pdf
+2026-01-29 20:45:40 - src.main - INFO - Matched transaction 16390174926: 1 item(s), 2 message(s)
+2026-01-29 20:45:40 - src.docuflow.generator - INFO - Generated label with items overlay for TID 16405895353 (1 item(s))
+2026-01-29 20:45:40 - src.main - INFO - Saved enhanced label: static/services/labels/16405895353_Vinted-Label-16405895353.pdf
+2026-01-29 20:45:40 - src.main - INFO - Matched transaction 16405895353: 1 item(s), 2 message(s)
+2026-01-29 20:45:40 - src.docuflow.generator - INFO - Generated label with items overlay for TID 16371762056 (1 item(s))
+2026-01-29 20:45:40 - src.main - INFO - Saved enhanced label: static/services/labels/16371762056_Vinted-Label-16371762056.pdf
+2026-01-29 20:45:40 - src.main - INFO - Matched transaction 16371762056: 1 item(s), 2 message(s)
+2026-01-29 20:45:40 - src.docuflow.generator - INFO - Generated label with items overlay for TID 16367964766 (1 item(s))
+2026-01-29 20:45:40 - src.main - INFO - Saved enhanced label: static/services/labels/16367964766_Vinted-Label-16367964766.pdf
+2026-01-29 20:45:40 - src.main - INFO - Matched transaction 16367964766: 1 item(s), 2 message(s)
+2026-01-29 20:45:40 - src.main - INFO - Successfully matched 6 transaction(s)
+2026-01-29 20:45:40 - src.main - INFO - 
+=== Step 4: Printing Labels ===
+2026-01-29 20:45:40 - src.main - INFO - Printing 6 label(s)
+2026-01-29 20:45:40 - src.services.printer - INFO - Starting batch print job: 6 label(s)
+2026-01-29 20:45:40 - src.services.printer - INFO - [DRY-RUN] Saved: 16399838501 -> logs/print_debug/20260129_204540_16399838501_16399838501_Vinted-Label-16399838501.pdf
+2026-01-29 20:45:41 - src.services.printer - INFO - [DRY-RUN] Saved: 16413326734 -> logs/print_debug/20260129_204541_16413326734_16413326734_Vinted-Label-16413326734.pdf
+2026-01-29 20:45:41 - src.services.printer - INFO - [DRY-RUN] Saved: 16390174926 -> logs/print_debug/20260129_204541_16390174926_16390174926_Vinted-Digital-Label-16390174926.pdf
+2026-01-29 20:45:42 - src.services.printer - INFO - [DRY-RUN] Saved: 16405895353 -> logs/print_debug/20260129_204542_16405895353_16405895353_Vinted-Label-16405895353.pdf
+2026-01-29 20:45:42 - src.services.printer - INFO - [DRY-RUN] Saved: 16371762056 -> logs/print_debug/20260129_204542_16371762056_16371762056_Vinted-Label-16371762056.pdf
+2026-01-29 20:45:43 - src.services.printer - INFO - [DRY-RUN] Saved: 16367964766 -> logs/print_debug/20260129_204543_16367964766_16367964766_Vinted-Label-16367964766.pdf
+2026-01-29 20:45:43 - src.services.printer - INFO - Batch dry-run complete: 6/6 saved
+2026-01-29 20:45:43 - src.main - INFO - 
+=== Step 5: Cleanup ===
+2026-01-29 20:45:43 - src.main - INFO - Cleaning up 12 message(s)
+2026-01-29 20:45:43 - src.services.gmail - INFO - Trashing 12 message(s)
+2026-01-29 20:45:44 - src.services.gmail - INFO - Trash operation complete: 12/12 successful
+2026-01-29 20:45:44 - src.main - INFO - Cleanup complete: 12 messages trashed, 6 files deleted
+2026-01-29 20:45:44 - src.main - INFO - 
+============================================================
+2026-01-29 20:45:44 - src.main - INFO - Pipeline Execution Complete
+2026-01-29 20:45:44 - src.main - INFO - ============================================================
+2026-01-29 20:45:44 - src.main - INFO - Summary: {'success': True, 'return_forms_found': 8, 'labels_found': 6, 'transactions_matched': 6, 'labels_printed': 6, 'messages_trashed': 12, 'files_cleaned': 6, 'dry_run': True}
+2026-01-29 20:45:44 - src.services.database - INFO - Ended pipeline run 1: 6 processed, 2 failed
+2026-01-29 20:49:50 - src.logging_config - INFO - ============================================================
+2026-01-29 20:49:50 - src.logging_config - INFO - VintedOS Logging Initialized
+2026-01-29 20:49:50 - src.logging_config - INFO - Log Level: INFO
+2026-01-29 20:49:50 - src.logging_config - INFO - Console Handler: True
+2026-01-29 20:49:50 - src.logging_config - INFO - File Handler: True
+2026-01-29 20:49:50 - src.logging_config - INFO - ============================================================
+2026-01-29 20:49:51 - src.main - INFO - Initializing VintedOS Pipeline
+2026-01-29 20:49:51 - src.services.database - INFO - Database engine initialized: vinted_os.db
+2026-01-29 20:49:51 - src.services.database - INFO - Database tables created/verified
+2026-01-29 20:49:51 - src.services.database - INFO - WAL mode enabled successfully
+2026-01-29 20:49:51 - src.services.printer - INFO - Dry-run mode enabled. PDFs will be saved to: logs/print_debug
+2026-01-29 20:49:51 - src.services.database - INFO - Started pipeline run 2
+2026-01-29 20:49:51 - src.main - INFO - Pipeline initialized (dry_run=True, run_id=2)
+2026-01-29 20:49:51 - src.main - INFO - ============================================================
+2026-01-29 20:49:51 - src.main - INFO - Starting VintedOS ETL Pipeline
+2026-01-29 20:49:51 - src.main - INFO - ============================================================
+2026-01-29 20:49:51 - src.main - INFO - 
+=== Step 1: Processing Return Forms ===
+2026-01-29 20:49:51 - src.services.gmail - INFO - Initializing Gmail API service
+2026-01-29 20:49:51 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-01-29 20:49:51 - src.services.gmail - INFO - Gmail API service initialized successfully
+2026-01-29 20:49:51 - src.services.gmail - INFO - Searching for messages: query='has:attachment filename:pdf', pattern='^Order-return-form'
+2026-01-29 20:49:51 - src.services.gmail - INFO - Found 7 matching attachment(s)
+2026-01-29 20:49:51 - src.main - INFO - Found 7 return form attachment(s)
+2026-01-29 20:49:52 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:52 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:52 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:52 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:52 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:52 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:52 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:52 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:52 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:52 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:52 - src.docuflow.parser - INFO - Parsed 1 items from text (TID: 14880032282)
+2026-01-29 20:49:52 - src.docuflow.parser - INFO - PDF parsing complete: TID=14880032282, Items=1
+2026-01-29 20:49:52 - src.main - INFO - Parsed return form for TID 14880032282: 1 item(s)
+2026-01-29 20:49:52 - src.services.database - INFO - Created transaction 14880032282 (DB ID: 9) with 1 items
+2026-01-29 20:49:52 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:52 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:52 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:52 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:52 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:52 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:52 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:52 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:52 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:52 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:52 - src.docuflow.parser - INFO - Parsed 1 items from text (TID: 16371762056)
+2026-01-29 20:49:52 - src.docuflow.parser - INFO - PDF parsing complete: TID=16371762056, Items=1
+2026-01-29 20:49:52 - src.main - INFO - Parsed return form for TID 16371762056: 1 item(s)
+2026-01-29 20:49:52 - src.services.database - INFO - Created transaction 16371762056 (DB ID: 10) with 1 items
+2026-01-29 20:49:52 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:52 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:52 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:52 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:52 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:52 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:52 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:52 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:52 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:52 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:52 - src.docuflow.parser - INFO - Parsed 1 items from text (TID: 16390174926)
+2026-01-29 20:49:52 - src.docuflow.parser - INFO - PDF parsing complete: TID=16390174926, Items=1
+2026-01-29 20:49:52 - src.main - INFO - Parsed return form for TID 16390174926: 1 item(s)
+2026-01-29 20:49:52 - src.services.database - INFO - Created transaction 16390174926 (DB ID: 11) with 1 items
+2026-01-29 20:49:52 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:52 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:52 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:52 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:52 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:52 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:52 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:52 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:52 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:52 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:52 - src.docuflow.parser - INFO - Parsed 1 items from text (TID: 16399838501)
+2026-01-29 20:49:52 - src.docuflow.parser - INFO - PDF parsing complete: TID=16399838501, Items=1
+2026-01-29 20:49:52 - src.main - INFO - Parsed return form for TID 16399838501: 1 item(s)
+2026-01-29 20:49:52 - src.services.database - INFO - Created transaction 16399838501 (DB ID: 12) with 1 items
+2026-01-29 20:49:53 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:53 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:53 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:53 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:53 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:53 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:53 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:53 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:53 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:53 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:53 - src.docuflow.parser - INFO - Parsed 1 items from text (TID: 16405895353)
+2026-01-29 20:49:53 - src.docuflow.parser - INFO - PDF parsing complete: TID=16405895353, Items=1
+2026-01-29 20:49:53 - src.main - INFO - Parsed return form for TID 16405895353: 1 item(s)
+2026-01-29 20:49:53 - src.services.database - INFO - Created transaction 16405895353 (DB ID: 13) with 1 items
+2026-01-29 20:49:53 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:53 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:53 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:53 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:53 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:53 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:53 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:53 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:53 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:53 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:53 - src.docuflow.parser - INFO - Parsed 1 items from text (TID: 16413326734)
+2026-01-29 20:49:53 - src.docuflow.parser - INFO - PDF parsing complete: TID=16413326734, Items=1
+2026-01-29 20:49:53 - src.main - INFO - Parsed return form for TID 16413326734: 1 item(s)
+2026-01-29 20:49:53 - src.services.database - INFO - Created transaction 16413326734 (DB ID: 14) with 1 items
+2026-01-29 20:49:53 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:53 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:53 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:53 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:53 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:53 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:53 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:53 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:53 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:53 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:49:53 - src.docuflow.parser - INFO - Parsed 1 items from text (TID: 16444339295)
+2026-01-29 20:49:53 - src.docuflow.parser - INFO - PDF parsing complete: TID=16444339295, Items=1
+2026-01-29 20:49:53 - src.main - INFO - Parsed return form for TID 16444339295: 1 item(s)
+2026-01-29 20:49:53 - src.services.database - INFO - Created transaction 16444339295 (DB ID: 15) with 1 items
+2026-01-29 20:49:53 - src.main - INFO - Parsed 7 return form(s)
+2026-01-29 20:49:53 - src.main - INFO - 
+=== Step 2: Processing Shipping Labels ===
+2026-01-29 20:49:53 - src.services.gmail - INFO - Searching for messages: query='has:attachment filename:pdf subject:'shipping label'', pattern='^Vinted-(?:Label|Digital-Label)'
+2026-01-29 20:49:54 - src.services.gmail - INFO - Found 6 matching attachment(s)
+2026-01-29 20:49:54 - src.main - INFO - Found 6 shipping label(s)
+2026-01-29 20:49:54 - src.docuflow.vision - INFO - Successfully processed PDF: 21043 -> 11619 bytes
+2026-01-29 20:49:54 - src.main - INFO - Processed label for TID 16399838501
+2026-01-29 20:49:55 - src.docuflow.vision - INFO - Successfully processed PDF: 20380 -> 10554 bytes
+2026-01-29 20:49:55 - src.main - INFO - Processed label for TID 16413326734
+2026-01-29 20:49:55 - src.docuflow.vision - INFO - Successfully processed PDF: 29328 -> 9152 bytes
+2026-01-29 20:49:55 - src.main - INFO - Processed label for TID 16390174926
+2026-01-29 20:49:55 - src.docuflow.vision - INFO - Successfully processed PDF: 21033 -> 11815 bytes
+2026-01-29 20:49:55 - src.main - INFO - Processed label for TID 16405895353
+2026-01-29 20:49:56 - src.docuflow.vision - INFO - Successfully processed PDF: 20874 -> 11507 bytes
+2026-01-29 20:49:56 - src.main - INFO - Processed label for TID 16371762056
+2026-01-29 20:49:56 - src.docuflow.vision - INFO - Successfully processed PDF: 20735 -> 10924 bytes
+2026-01-29 20:49:56 - src.main - INFO - Processed label for TID 16367964766
+2026-01-29 20:49:56 - src.main - INFO - Processed 6 shipping label(s)
+2026-01-29 20:49:56 - src.main - INFO - 
+=== Step 3: Matching and Generating Labels ===
+2026-01-29 20:49:56 - src.docuflow.generator - INFO - Generated label with items overlay for TID 16399838501 (1 item(s))
+2026-01-29 20:49:56 - src.main - INFO - Saved enhanced label: static/services/labels/16399838501_Vinted-Label-16399838501.pdf
+2026-01-29 20:49:56 - src.main - INFO - Matched transaction 16399838501: 1 item(s), 2 message(s)
+2026-01-29 20:49:56 - src.docuflow.generator - INFO - Generated label with items overlay for TID 16413326734 (1 item(s))
+2026-01-29 20:49:56 - src.main - INFO - Saved enhanced label: static/services/labels/16413326734_Vinted-Label-16413326734.pdf
+2026-01-29 20:49:56 - src.main - INFO - Matched transaction 16413326734: 1 item(s), 2 message(s)
+2026-01-29 20:49:56 - src.docuflow.generator - INFO - Generated label with items overlay for TID 16390174926 (1 item(s))
+2026-01-29 20:49:56 - src.main - INFO - Saved enhanced label: static/services/labels/16390174926_Vinted-Digital-Label-16390174926.pdf
+2026-01-29 20:49:56 - src.main - INFO - Matched transaction 16390174926: 1 item(s), 2 message(s)
+2026-01-29 20:49:56 - src.docuflow.generator - INFO - Generated label with items overlay for TID 16405895353 (1 item(s))
+2026-01-29 20:49:56 - src.main - INFO - Saved enhanced label: static/services/labels/16405895353_Vinted-Label-16405895353.pdf
+2026-01-29 20:49:56 - src.main - INFO - Matched transaction 16405895353: 1 item(s), 2 message(s)
+2026-01-29 20:49:56 - src.docuflow.generator - INFO - Generated label with items overlay for TID 16371762056 (1 item(s))
+2026-01-29 20:49:56 - src.main - INFO - Saved enhanced label: static/services/labels/16371762056_Vinted-Label-16371762056.pdf
+2026-01-29 20:49:56 - src.main - INFO - Matched transaction 16371762056: 1 item(s), 2 message(s)
+2026-01-29 20:49:56 - src.main - WARNING - No return form found for label TID 16367964766, skipping
+2026-01-29 20:49:56 - src.main - INFO - Successfully matched 5 transaction(s)
+2026-01-29 20:49:56 - src.main - INFO - 
+=== Step 4: Printing Labels ===
+2026-01-29 20:49:56 - src.main - INFO - Printing 5 label(s)
+2026-01-29 20:49:56 - src.services.printer - INFO - Starting batch print job: 5 label(s)
+2026-01-29 20:49:56 - src.services.printer - INFO - [DRY-RUN] Saved: 16399838501 -> logs/print_debug/20260129_204956_16399838501_16399838501_Vinted-Label-16399838501.pdf
+2026-01-29 20:49:57 - src.services.printer - INFO - [DRY-RUN] Saved: 16413326734 -> logs/print_debug/20260129_204957_16413326734_16413326734_Vinted-Label-16413326734.pdf
+2026-01-29 20:49:57 - src.services.printer - INFO - [DRY-RUN] Saved: 16390174926 -> logs/print_debug/20260129_204957_16390174926_16390174926_Vinted-Digital-Label-16390174926.pdf
+2026-01-29 20:49:58 - src.services.printer - INFO - [DRY-RUN] Saved: 16405895353 -> logs/print_debug/20260129_204958_16405895353_16405895353_Vinted-Label-16405895353.pdf
+2026-01-29 20:49:58 - src.services.printer - INFO - [DRY-RUN] Saved: 16371762056 -> logs/print_debug/20260129_204958_16371762056_16371762056_Vinted-Label-16371762056.pdf
+2026-01-29 20:49:58 - src.services.printer - INFO - Batch dry-run complete: 5/5 saved
+2026-01-29 20:49:58 - src.main - INFO - 
+=== Step 5: Cleanup ===
+2026-01-29 20:49:58 - src.main - INFO - Cleaning up 10 message(s)
+2026-01-29 20:49:58 - src.services.gmail - INFO - Trashing 10 message(s)
+2026-01-29 20:50:00 - src.services.gmail - INFO - Trash operation complete: 10/10 successful
+2026-01-29 20:50:00 - src.main - INFO - Cleanup complete: 10 messages trashed, 5 files deleted
+2026-01-29 20:50:00 - src.main - INFO - 
+============================================================
+2026-01-29 20:50:00 - src.main - INFO - Pipeline Execution Complete
+2026-01-29 20:50:00 - src.main - INFO - ============================================================
+2026-01-29 20:50:00 - src.main - INFO - Summary: {'success': True, 'return_forms_found': 7, 'labels_found': 6, 'transactions_matched': 5, 'labels_printed': 5, 'messages_trashed': 10, 'files_cleaned': 5, 'dry_run': True}
+2026-01-29 20:50:00 - src.services.database - INFO - Ended pipeline run 2: 5 processed, 2 failed
+2026-01-29 20:51:18 - src.logging_config - INFO - ============================================================
+2026-01-29 20:51:18 - src.logging_config - INFO - VintedOS Logging Initialized
+2026-01-29 20:51:18 - src.logging_config - INFO - Log Level: INFO
+2026-01-29 20:51:18 - src.logging_config - INFO - Console Handler: True
+2026-01-29 20:51:18 - src.logging_config - INFO - File Handler: True
+2026-01-29 20:51:18 - src.logging_config - INFO - ============================================================
+2026-01-29 20:51:19 - src.main - INFO - Initializing VintedOS Pipeline
+2026-01-29 20:51:19 - src.services.database - INFO - Database engine initialized: vinted_os.db
+2026-01-29 20:51:19 - src.services.database - INFO - Database tables created/verified
+2026-01-29 20:51:19 - src.services.database - INFO - WAL mode enabled successfully
+2026-01-29 20:51:19 - src.services.printer - INFO - Dry-run mode enabled. PDFs will be saved to: logs/print_debug
+2026-01-29 20:51:19 - src.services.database - INFO - Started pipeline run 1
+2026-01-29 20:51:19 - src.main - INFO - Pipeline initialized (dry_run=True, run_id=1)
+2026-01-29 20:51:19 - src.main - INFO - ============================================================
+2026-01-29 20:51:19 - src.main - INFO - Starting VintedOS ETL Pipeline
+2026-01-29 20:51:19 - src.main - INFO - ============================================================
+2026-01-29 20:51:19 - src.main - INFO - 
+=== Step 1: Processing Return Forms ===
+2026-01-29 20:51:19 - src.services.gmail - INFO - Initializing Gmail API service
+2026-01-29 20:51:19 - src.services.gmail - INFO - Refreshing expired credentials
+2026-01-29 20:51:19 - src.services.gmail - INFO - Saved credentials to token.json
+2026-01-29 20:51:19 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-01-29 20:51:19 - src.services.gmail - INFO - Gmail API service initialized successfully
+2026-01-29 20:51:19 - src.services.gmail - INFO - Searching for messages: query='has:attachment filename:pdf', pattern='^Order-return-form'
+2026-01-29 20:51:19 - src.services.gmail - INFO - Found 7 matching attachment(s)
+2026-01-29 20:51:19 - src.main - INFO - Found 7 return form attachment(s)
+2026-01-29 20:51:20 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:20 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:20 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:20 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:20 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:20 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:20 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:20 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:20 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:20 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:20 - src.docuflow.parser - INFO - Parsed 1 items from text (TID: 14880032282)
+2026-01-29 20:51:20 - src.docuflow.parser - INFO - PDF parsing complete: TID=14880032282, Items=1
+2026-01-29 20:51:20 - src.main - INFO - Parsed return form for TID 14880032282: 1 item(s)
+2026-01-29 20:51:20 - src.services.database - INFO - Created transaction 14880032282 (DB ID: 1) with 1 items
+2026-01-29 20:51:20 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:20 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:20 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:20 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:20 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:20 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:20 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:20 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:20 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:20 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:20 - src.docuflow.parser - INFO - Parsed 1 items from text (TID: 16371762056)
+2026-01-29 20:51:20 - src.docuflow.parser - INFO - PDF parsing complete: TID=16371762056, Items=1
+2026-01-29 20:51:20 - src.main - INFO - Parsed return form for TID 16371762056: 1 item(s)
+2026-01-29 20:51:20 - src.services.database - INFO - Created transaction 16371762056 (DB ID: 2) with 1 items
+2026-01-29 20:51:20 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:20 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:20 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:20 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:20 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:20 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:20 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:20 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:20 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:20 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:20 - src.docuflow.parser - INFO - Parsed 1 items from text (TID: 16390174926)
+2026-01-29 20:51:20 - src.docuflow.parser - INFO - PDF parsing complete: TID=16390174926, Items=1
+2026-01-29 20:51:20 - src.main - INFO - Parsed return form for TID 16390174926: 1 item(s)
+2026-01-29 20:51:20 - src.services.database - INFO - Created transaction 16390174926 (DB ID: 3) with 1 items
+2026-01-29 20:51:20 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:20 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:20 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:20 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:20 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:20 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:20 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:20 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:20 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:20 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:20 - src.docuflow.parser - INFO - Parsed 1 items from text (TID: 16399838501)
+2026-01-29 20:51:20 - src.docuflow.parser - INFO - PDF parsing complete: TID=16399838501, Items=1
+2026-01-29 20:51:20 - src.main - INFO - Parsed return form for TID 16399838501: 1 item(s)
+2026-01-29 20:51:20 - src.services.database - INFO - Created transaction 16399838501 (DB ID: 4) with 1 items
+2026-01-29 20:51:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:21 - src.docuflow.parser - INFO - Parsed 1 items from text (TID: 16405895353)
+2026-01-29 20:51:21 - src.docuflow.parser - INFO - PDF parsing complete: TID=16405895353, Items=1
+2026-01-29 20:51:21 - src.main - INFO - Parsed return form for TID 16405895353: 1 item(s)
+2026-01-29 20:51:21 - src.services.database - INFO - Created transaction 16405895353 (DB ID: 5) with 1 items
+2026-01-29 20:51:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:21 - src.docuflow.parser - INFO - Parsed 1 items from text (TID: 16413326734)
+2026-01-29 20:51:21 - src.docuflow.parser - INFO - PDF parsing complete: TID=16413326734, Items=1
+2026-01-29 20:51:21 - src.main - INFO - Parsed return form for TID 16413326734: 1 item(s)
+2026-01-29 20:51:21 - src.services.database - INFO - Created transaction 16413326734 (DB ID: 6) with 1 items
+2026-01-29 20:51:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:51:21 - src.docuflow.parser - INFO - Parsed 1 items from text (TID: 16444339295)
+2026-01-29 20:51:21 - src.docuflow.parser - INFO - PDF parsing complete: TID=16444339295, Items=1
+2026-01-29 20:51:21 - src.main - INFO - Parsed return form for TID 16444339295: 1 item(s)
+2026-01-29 20:51:21 - src.services.database - INFO - Created transaction 16444339295 (DB ID: 7) with 1 items
+2026-01-29 20:51:21 - src.main - INFO - Parsed 7 return form(s)
+2026-01-29 20:51:21 - src.main - INFO - 
+=== Step 2: Processing Shipping Labels ===
+2026-01-29 20:51:21 - src.services.gmail - INFO - Searching for messages: query='has:attachment filename:pdf subject:'shipping label'', pattern='^Vinted-(?:Label|Digital-Label)'
+2026-01-29 20:51:22 - src.services.gmail - INFO - Found 5 matching attachment(s)
+2026-01-29 20:51:22 - src.main - INFO - Found 5 shipping label(s)
+2026-01-29 20:51:22 - src.docuflow.vision - INFO - Successfully processed PDF: 21043 -> 11619 bytes
+2026-01-29 20:51:22 - src.main - INFO - Processed label for TID 16399838501
+2026-01-29 20:51:22 - src.docuflow.vision - INFO - Successfully processed PDF: 20380 -> 10554 bytes
+2026-01-29 20:51:22 - src.main - INFO - Processed label for TID 16413326734
+2026-01-29 20:51:23 - src.docuflow.vision - INFO - Successfully processed PDF: 29328 -> 9152 bytes
+2026-01-29 20:51:23 - src.main - INFO - Processed label for TID 16390174926
+2026-01-29 20:51:23 - src.docuflow.vision - INFO - Successfully processed PDF: 21033 -> 11815 bytes
+2026-01-29 20:51:23 - src.main - INFO - Processed label for TID 16405895353
+2026-01-29 20:51:23 - src.docuflow.vision - INFO - Successfully processed PDF: 20735 -> 10924 bytes
+2026-01-29 20:51:23 - src.main - INFO - Processed label for TID 16367964766
+2026-01-29 20:51:23 - src.main - INFO - Processed 5 shipping label(s)
+2026-01-29 20:51:23 - src.main - INFO - 
+=== Step 3: Matching and Generating Labels ===
+2026-01-29 20:51:23 - src.docuflow.generator - INFO - Generated label with items overlay for TID 16399838501 (1 item(s))
+2026-01-29 20:51:23 - src.main - INFO - Saved enhanced label: static/services/labels/16399838501_Vinted-Label-16399838501.pdf
+2026-01-29 20:51:23 - src.main - INFO - Matched transaction 16399838501: 1 item(s), 2 message(s)
+2026-01-29 20:51:23 - src.docuflow.generator - INFO - Generated label with items overlay for TID 16413326734 (1 item(s))
+2026-01-29 20:51:23 - src.main - INFO - Saved enhanced label: static/services/labels/16413326734_Vinted-Label-16413326734.pdf
+2026-01-29 20:51:23 - src.main - INFO - Matched transaction 16413326734: 1 item(s), 2 message(s)
+2026-01-29 20:51:23 - src.docuflow.generator - INFO - Generated label with items overlay for TID 16390174926 (1 item(s))
+2026-01-29 20:51:23 - src.main - INFO - Saved enhanced label: static/services/labels/16390174926_Vinted-Digital-Label-16390174926.pdf
+2026-01-29 20:51:23 - src.main - INFO - Matched transaction 16390174926: 1 item(s), 2 message(s)
+2026-01-29 20:51:23 - src.docuflow.generator - INFO - Generated label with items overlay for TID 16405895353 (1 item(s))
+2026-01-29 20:51:23 - src.main - INFO - Saved enhanced label: static/services/labels/16405895353_Vinted-Label-16405895353.pdf
+2026-01-29 20:51:23 - src.main - INFO - Matched transaction 16405895353: 1 item(s), 2 message(s)
+2026-01-29 20:51:23 - src.main - WARNING - No return form found for label TID 16367964766, skipping
+2026-01-29 20:51:23 - src.main - INFO - Successfully matched 4 transaction(s)
+2026-01-29 20:51:23 - src.main - INFO - 
+=== Step 4: Printing Labels ===
+2026-01-29 20:51:23 - src.main - INFO - Printing 4 label(s)
+2026-01-29 20:51:23 - src.services.printer - INFO - Starting batch print job: 4 label(s)
+2026-01-29 20:51:23 - src.services.printer - INFO - [DRY-RUN] Saved: 16399838501 -> logs/print_debug/20260129_205123_16399838501_16399838501_Vinted-Label-16399838501.pdf
+2026-01-29 20:51:24 - src.services.printer - INFO - [DRY-RUN] Saved: 16413326734 -> logs/print_debug/20260129_205124_16413326734_16413326734_Vinted-Label-16413326734.pdf
+2026-01-29 20:51:24 - src.services.printer - INFO - [DRY-RUN] Saved: 16390174926 -> logs/print_debug/20260129_205124_16390174926_16390174926_Vinted-Digital-Label-16390174926.pdf
+2026-01-29 20:51:25 - src.services.printer - INFO - [DRY-RUN] Saved: 16405895353 -> logs/print_debug/20260129_205125_16405895353_16405895353_Vinted-Label-16405895353.pdf
+2026-01-29 20:51:25 - src.services.printer - INFO - Batch dry-run complete: 4/4 saved
+2026-01-29 20:51:25 - src.main - INFO - 
+=== Step 5: Cleanup ===
+2026-01-29 20:51:25 - src.main - INFO - Cleaning up 8 message(s)
+2026-01-29 20:51:25 - src.services.gmail - INFO - Trashing 8 message(s)
+2026-01-29 20:51:26 - src.services.gmail - INFO - Trash operation complete: 8/8 successful
+2026-01-29 20:51:26 - src.main - INFO - Cleanup complete: 8 messages trashed, 4 files deleted
+2026-01-29 20:51:26 - src.main - INFO - 
+============================================================
+2026-01-29 20:51:26 - src.main - INFO - Pipeline Execution Complete
+2026-01-29 20:51:26 - src.main - INFO - ============================================================
+2026-01-29 20:51:26 - src.main - INFO - Summary: {'success': True, 'return_forms_found': 7, 'labels_found': 5, 'transactions_matched': 4, 'labels_printed': 4, 'messages_trashed': 8, 'files_cleaned': 4, 'dry_run': True}
+2026-01-29 20:51:26 - src.services.database - INFO - Ended pipeline run 1: 4 processed, 3 failed
+2026-01-29 20:54:20 - src.logging_config - INFO - ============================================================
+2026-01-29 20:54:20 - src.logging_config - INFO - VintedOS Logging Initialized
+2026-01-29 20:54:20 - src.logging_config - INFO - Log Level: INFO
+2026-01-29 20:54:20 - src.logging_config - INFO - Console Handler: True
+2026-01-29 20:54:20 - src.logging_config - INFO - File Handler: True
+2026-01-29 20:54:20 - src.logging_config - INFO - ============================================================
+2026-01-29 20:54:21 - src.main - INFO - Initializing VintedOS Pipeline
+2026-01-29 20:54:21 - src.services.database - INFO - Database engine initialized: vinted_os.db
+2026-01-29 20:54:21 - src.services.database - INFO - Database tables created/verified
+2026-01-29 20:54:21 - src.services.database - INFO - WAL mode enabled successfully
+2026-01-29 20:54:21 - src.services.printer - INFO - Dry-run mode enabled. PDFs will be saved to: logs/print_debug
+2026-01-29 20:54:21 - src.services.database - INFO - Started pipeline run 1
+2026-01-29 20:54:21 - src.main - INFO - Pipeline initialized (dry_run=True, run_id=1)
+2026-01-29 20:54:21 - src.main - INFO - ============================================================
+2026-01-29 20:54:21 - src.main - INFO - Starting VintedOS ETL Pipeline
+2026-01-29 20:54:21 - src.main - INFO - ============================================================
+2026-01-29 20:54:21 - src.main - INFO - 
+=== Step 1: Processing Return Forms ===
+2026-01-29 20:54:21 - src.services.gmail - INFO - Initializing Gmail API service
+2026-01-29 20:54:21 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-01-29 20:54:21 - src.services.gmail - INFO - Gmail API service initialized successfully
+2026-01-29 20:54:21 - src.services.gmail - INFO - Searching for messages: query='has:attachment filename:pdf', pattern='^Order-return-form'
+2026-01-29 20:54:21 - src.services.gmail - INFO - Found 8 matching attachment(s)
+2026-01-29 20:54:21 - src.main - INFO - Found 8 return form attachment(s)
+2026-01-29 20:54:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:21 - src.docuflow.parser - INFO - Parsed 1 items from text (TID: 14880032282)
+2026-01-29 20:54:21 - src.docuflow.parser - INFO - PDF parsing complete: TID=14880032282, Items=1
+2026-01-29 20:54:21 - src.main - INFO - Parsed return form for TID 14880032282: 1 item(s)
+2026-01-29 20:54:21 - src.services.database - INFO - Created transaction 14880032282 (DB ID: 1) with 1 items
+2026-01-29 20:54:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:22 - src.docuflow.parser - INFO - Parsed 1 items from text (TID: 16367964766)
+2026-01-29 20:54:22 - src.docuflow.parser - INFO - PDF parsing complete: TID=16367964766, Items=1
+2026-01-29 20:54:22 - src.main - INFO - Parsed return form for TID 16367964766: 1 item(s)
+2026-01-29 20:54:22 - src.services.database - INFO - Created transaction 16367964766 (DB ID: 2) with 1 items
+2026-01-29 20:54:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:22 - src.docuflow.parser - INFO - Parsed 1 items from text (TID: 16371762056)
+2026-01-29 20:54:22 - src.docuflow.parser - INFO - PDF parsing complete: TID=16371762056, Items=1
+2026-01-29 20:54:22 - src.main - INFO - Parsed return form for TID 16371762056: 1 item(s)
+2026-01-29 20:54:22 - src.services.database - INFO - Created transaction 16371762056 (DB ID: 3) with 1 items
+2026-01-29 20:54:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:22 - src.docuflow.parser - INFO - Parsed 1 items from text (TID: 16390174926)
+2026-01-29 20:54:22 - src.docuflow.parser - INFO - PDF parsing complete: TID=16390174926, Items=1
+2026-01-29 20:54:22 - src.main - INFO - Parsed return form for TID 16390174926: 1 item(s)
+2026-01-29 20:54:22 - src.services.database - INFO - Created transaction 16390174926 (DB ID: 4) with 1 items
+2026-01-29 20:54:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:22 - src.docuflow.parser - INFO - Parsed 1 items from text (TID: 16399838501)
+2026-01-29 20:54:22 - src.docuflow.parser - INFO - PDF parsing complete: TID=16399838501, Items=1
+2026-01-29 20:54:22 - src.main - INFO - Parsed return form for TID 16399838501: 1 item(s)
+2026-01-29 20:54:22 - src.services.database - INFO - Created transaction 16399838501 (DB ID: 5) with 1 items
+2026-01-29 20:54:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:22 - src.docuflow.parser - INFO - Parsed 1 items from text (TID: 16405895353)
+2026-01-29 20:54:22 - src.docuflow.parser - INFO - PDF parsing complete: TID=16405895353, Items=1
+2026-01-29 20:54:22 - src.main - INFO - Parsed return form for TID 16405895353: 1 item(s)
+2026-01-29 20:54:22 - src.services.database - INFO - Created transaction 16405895353 (DB ID: 6) with 1 items
+2026-01-29 20:54:23 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:23 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:23 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:23 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:23 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:23 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:23 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:23 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:23 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:23 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:23 - src.docuflow.parser - INFO - Parsed 1 items from text (TID: 16413326734)
+2026-01-29 20:54:23 - src.docuflow.parser - INFO - PDF parsing complete: TID=16413326734, Items=1
+2026-01-29 20:54:23 - src.main - INFO - Parsed return form for TID 16413326734: 1 item(s)
+2026-01-29 20:54:23 - src.services.database - INFO - Created transaction 16413326734 (DB ID: 7) with 1 items
+2026-01-29 20:54:23 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:23 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:23 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:23 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:23 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:23 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:23 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:23 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:23 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:23 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 20:54:23 - src.docuflow.parser - INFO - Parsed 1 items from text (TID: 16444339295)
+2026-01-29 20:54:23 - src.docuflow.parser - INFO - PDF parsing complete: TID=16444339295, Items=1
+2026-01-29 20:54:23 - src.main - INFO - Parsed return form for TID 16444339295: 1 item(s)
+2026-01-29 20:54:23 - src.services.database - INFO - Created transaction 16444339295 (DB ID: 8) with 1 items
+2026-01-29 20:54:23 - src.main - INFO - Parsed 8 return form(s)
+2026-01-29 20:54:23 - src.main - INFO - 
+=== Step 2: Processing Shipping Labels ===
+2026-01-29 20:54:23 - src.services.gmail - INFO - Searching for messages: query='has:attachment filename:pdf subject:'shipping label'', pattern='^Vinted-(?:Label|Digital-Label)'
+2026-01-29 20:54:23 - src.services.gmail - INFO - Found 5 matching attachment(s)
+2026-01-29 20:54:23 - src.main - INFO - Found 5 shipping label(s)
+2026-01-29 20:54:24 - src.docuflow.vision - INFO - Successfully processed PDF: 21043 -> 11619 bytes
+2026-01-29 20:54:24 - src.main - INFO - Processed label for TID 16399838501
+2026-01-29 20:54:24 - src.docuflow.vision - INFO - Successfully processed PDF: 20380 -> 10554 bytes
+2026-01-29 20:54:24 - src.main - INFO - Processed label for TID 16413326734
+2026-01-29 20:54:24 - src.docuflow.vision - INFO - Successfully processed PDF: 29328 -> 9152 bytes
+2026-01-29 20:54:24 - src.main - INFO - Processed label for TID 16390174926
+2026-01-29 20:54:25 - src.docuflow.vision - INFO - Successfully processed PDF: 21033 -> 11815 bytes
+2026-01-29 20:54:25 - src.main - INFO - Processed label for TID 16405895353
+2026-01-29 20:54:25 - src.docuflow.vision - INFO - Successfully processed PDF: 20735 -> 10924 bytes
+2026-01-29 20:54:25 - src.main - INFO - Processed label for TID 16367964766
+2026-01-29 20:54:25 - src.main - INFO - Processed 5 shipping label(s)
+2026-01-29 20:54:25 - src.main - INFO - 
+=== Step 3: Matching and Generating Labels ===
+2026-01-29 20:54:25 - src.docuflow.generator - INFO - Generated label with items overlay for TID 16399838501 (1 item(s))
+2026-01-29 20:54:25 - src.main - INFO - Saved enhanced label: static/services/labels/16399838501_Vinted-Label-16399838501.pdf
+2026-01-29 20:54:25 - src.main - INFO - Matched transaction 16399838501: 1 item(s), 2 message(s)
+2026-01-29 20:54:25 - src.docuflow.generator - INFO - Generated label with items overlay for TID 16413326734 (1 item(s))
+2026-01-29 20:54:25 - src.main - INFO - Saved enhanced label: static/services/labels/16413326734_Vinted-Label-16413326734.pdf
+2026-01-29 20:54:25 - src.main - INFO - Matched transaction 16413326734: 1 item(s), 2 message(s)
+2026-01-29 20:54:25 - src.docuflow.generator - INFO - Generated label with items overlay for TID 16390174926 (1 item(s))
+2026-01-29 20:54:25 - src.main - INFO - Saved enhanced label: static/services/labels/16390174926_Vinted-Digital-Label-16390174926.pdf
+2026-01-29 20:54:25 - src.main - INFO - Matched transaction 16390174926: 1 item(s), 2 message(s)
+2026-01-29 20:54:25 - src.docuflow.generator - INFO - Generated label with items overlay for TID 16405895353 (1 item(s))
+2026-01-29 20:54:25 - src.main - INFO - Saved enhanced label: static/services/labels/16405895353_Vinted-Label-16405895353.pdf
+2026-01-29 20:54:25 - src.main - INFO - Matched transaction 16405895353: 1 item(s), 2 message(s)
+2026-01-29 20:54:25 - src.docuflow.generator - INFO - Generated label with items overlay for TID 16367964766 (1 item(s))
+2026-01-29 20:54:25 - src.main - INFO - Saved enhanced label: static/services/labels/16367964766_Vinted-Label-16367964766.pdf
+2026-01-29 20:54:25 - src.main - INFO - Matched transaction 16367964766: 1 item(s), 2 message(s)
+2026-01-29 20:54:25 - src.main - INFO - Successfully matched 5 transaction(s)
+2026-01-29 20:54:25 - src.main - INFO - 
+=== Step 4: Printing Labels ===
+2026-01-29 20:54:25 - src.main - INFO - Printing 5 label(s)
+2026-01-29 20:54:25 - src.services.printer - INFO - Starting batch print job: 5 label(s)
+2026-01-29 20:54:25 - src.services.printer - INFO - [DRY-RUN] Saved: 16399838501 -> logs/print_debug/20260129_205425_16399838501_16399838501_Vinted-Label-16399838501.pdf
+2026-01-29 20:54:25 - src.services.printer - INFO - [DRY-RUN] Saved: 16413326734 -> logs/print_debug/20260129_205425_16413326734_16413326734_Vinted-Label-16413326734.pdf
+2026-01-29 20:54:26 - src.services.printer - INFO - [DRY-RUN] Saved: 16390174926 -> logs/print_debug/20260129_205426_16390174926_16390174926_Vinted-Digital-Label-16390174926.pdf
+2026-01-29 20:54:26 - src.services.printer - INFO - [DRY-RUN] Saved: 16405895353 -> logs/print_debug/20260129_205426_16405895353_16405895353_Vinted-Label-16405895353.pdf
+2026-01-29 20:54:27 - src.services.printer - INFO - [DRY-RUN] Saved: 16367964766 -> logs/print_debug/20260129_205427_16367964766_16367964766_Vinted-Label-16367964766.pdf
+2026-01-29 20:54:27 - src.services.printer - INFO - Batch dry-run complete: 5/5 saved
+2026-01-29 20:54:27 - src.main - INFO - 
+=== Step 5: Cleanup ===
+2026-01-29 20:54:27 - src.main - INFO - Cleaning up 10 message(s)
+2026-01-29 20:54:27 - src.services.gmail - INFO - Trashing 10 message(s)
+2026-01-29 20:54:28 - src.services.gmail - INFO - Trash operation complete: 10/10 successful
+2026-01-29 20:54:28 - src.main - INFO - Cleanup complete: 10 messages trashed, 5 files deleted
+2026-01-29 20:54:28 - src.main - INFO - 
+============================================================
+2026-01-29 20:54:28 - src.main - INFO - Pipeline Execution Complete
+2026-01-29 20:54:28 - src.main - INFO - ============================================================
+2026-01-29 20:54:28 - src.main - INFO - Summary: {'success': True, 'return_forms_found': 8, 'labels_found': 5, 'transactions_matched': 5, 'labels_printed': 5, 'messages_trashed': 10, 'files_cleaned': 5, 'dry_run': True}
+2026-01-29 20:54:28 - src.services.database - INFO - Ended pipeline run 1: 5 processed, 3 failed
+2026-01-29 21:03:34 - src.logging_config - INFO - ============================================================
+2026-01-29 21:03:34 - src.logging_config - INFO - VintedOS Logging Initialized
+2026-01-29 21:03:34 - src.logging_config - INFO - Log Level: INFO
+2026-01-29 21:03:34 - src.logging_config - INFO - Console Handler: True
+2026-01-29 21:03:34 - src.logging_config - INFO - File Handler: True
+2026-01-29 21:03:34 - src.logging_config - INFO - ============================================================
+2026-01-29 21:03:35 - src.main - INFO - Initializing VintedOS Pipeline
+2026-01-29 21:03:35 - src.services.database - INFO - Database engine initialized: vinted_os.db
+2026-01-29 21:03:35 - src.services.database - INFO - Database tables created/verified
+2026-01-29 21:03:35 - src.services.database - INFO - WAL mode enabled successfully
+2026-01-29 21:03:35 - src.services.printer - INFO - Dry-run mode enabled. PDFs will be saved to: logs/print_debug
+2026-01-29 21:03:35 - src.services.database - INFO - Started pipeline run 1
+2026-01-29 21:03:35 - src.main - INFO - Pipeline initialized (dry_run=True, run_id=1)
+2026-01-29 21:03:35 - src.main - INFO - ============================================================
+2026-01-29 21:03:35 - src.main - INFO - Starting VintedOS ETL Pipeline
+2026-01-29 21:03:35 - src.main - INFO - ============================================================
+2026-01-29 21:03:35 - src.main - INFO - 
+=== Step 1: Processing Return Forms ===
+2026-01-29 21:03:35 - src.services.gmail - INFO - Initializing Gmail API service
+2026-01-29 21:03:35 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-01-29 21:03:35 - src.services.gmail - INFO - Gmail API service initialized successfully
+2026-01-29 21:03:35 - src.services.gmail - INFO - Searching for messages: query='has:attachment filename:pdf', pattern='^Order-return-form'
+2026-01-29 21:03:36 - src.services.gmail - INFO - Found 6 matching attachment(s)
+2026-01-29 21:03:36 - src.main - INFO - Found 6 return form attachment(s)
+2026-01-29 21:03:36 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:03:36 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:03:36 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:03:36 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:03:36 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:03:36 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:03:36 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:03:36 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:03:36 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:03:36 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:03:36 - src.docuflow.parser - INFO - Parsed 1 items from text (TID: 14880032282)
+2026-01-29 21:03:36 - src.docuflow.parser - INFO - PDF parsing complete: TID=14880032282, Items=1
+2026-01-29 21:03:36 - src.main - INFO - Parsed return form for TID 14880032282: 1 item(s)
+2026-01-29 21:03:36 - src.services.database - INFO - Created transaction 14880032282 (DB ID: 1) with 1 items
+2026-01-29 21:03:36 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:03:36 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:03:36 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:03:36 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:03:36 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:03:36 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:03:36 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:03:36 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:03:36 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:03:36 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:03:36 - src.docuflow.parser - INFO - Parsed 1 items from text (TID: 16371762056)
+2026-01-29 21:03:36 - src.docuflow.parser - INFO - PDF parsing complete: TID=16371762056, Items=1
+2026-01-29 21:03:36 - src.main - INFO - Parsed return form for TID 16371762056: 1 item(s)
+2026-01-29 21:03:36 - src.services.database - INFO - Created transaction 16371762056 (DB ID: 2) with 1 items
+2026-01-29 21:03:36 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:03:36 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:03:36 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:03:36 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:03:36 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:03:36 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:03:36 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:03:36 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:03:36 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:03:36 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:03:36 - src.docuflow.parser - INFO - Parsed 1 items from text (TID: 16390174926)
+2026-01-29 21:03:36 - src.docuflow.parser - INFO - PDF parsing complete: TID=16390174926, Items=1
+2026-01-29 21:03:36 - src.main - INFO - Parsed return form for TID 16390174926: 1 item(s)
+2026-01-29 21:03:36 - src.services.database - INFO - Created transaction 16390174926 (DB ID: 3) with 1 items
+2026-01-29 21:03:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:03:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:03:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:03:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:03:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:03:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:03:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:03:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:03:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:03:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:03:37 - src.docuflow.parser - INFO - Parsed 1 items from text (TID: 16399838501)
+2026-01-29 21:03:37 - src.docuflow.parser - INFO - PDF parsing complete: TID=16399838501, Items=1
+2026-01-29 21:03:37 - src.main - INFO - Parsed return form for TID 16399838501: 1 item(s)
+2026-01-29 21:03:37 - src.services.database - INFO - Created transaction 16399838501 (DB ID: 4) with 1 items
+2026-01-29 21:03:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:03:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:03:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:03:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:03:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:03:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:03:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:03:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:03:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:03:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:03:37 - src.docuflow.parser - INFO - Parsed 1 items from text (TID: 16413326734)
+2026-01-29 21:03:37 - src.docuflow.parser - INFO - PDF parsing complete: TID=16413326734, Items=1
+2026-01-29 21:03:37 - src.main - INFO - Parsed return form for TID 16413326734: 1 item(s)
+2026-01-29 21:03:37 - src.services.database - INFO - Created transaction 16413326734 (DB ID: 5) with 1 items
+2026-01-29 21:03:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:03:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:03:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:03:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:03:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:03:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:03:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:03:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:03:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:03:37 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:03:37 - src.docuflow.parser - INFO - Parsed 1 items from text (TID: 16444339295)
+2026-01-29 21:03:37 - src.docuflow.parser - INFO - PDF parsing complete: TID=16444339295, Items=1
+2026-01-29 21:03:37 - src.main - INFO - Parsed return form for TID 16444339295: 1 item(s)
+2026-01-29 21:03:37 - src.services.database - INFO - Created transaction 16444339295 (DB ID: 6) with 1 items
+2026-01-29 21:03:37 - src.main - INFO - Parsed 6 return form(s)
+2026-01-29 21:03:37 - src.main - INFO - 
+=== Step 2: Processing Shipping Labels ===
+2026-01-29 21:03:37 - src.services.gmail - INFO - Searching for messages: query='has:attachment filename:pdf subject:'shipping label'', pattern='^Vinted-(?:Label|Digital-Label)'
+2026-01-29 21:03:37 - src.services.gmail - INFO - Found 6 matching attachment(s)
+2026-01-29 21:03:37 - src.main - INFO - Found 6 shipping label(s)
+2026-01-29 21:03:38 - src.docuflow.vision - INFO - Successfully processed PDF: 21043 -> 11619 bytes
+2026-01-29 21:03:38 - src.main - INFO - Processed label for TID 16399838501
+2026-01-29 21:03:38 - src.docuflow.vision - INFO - Successfully processed PDF: 20380 -> 10554 bytes
+2026-01-29 21:03:38 - src.main - INFO - Processed label for TID 16413326734
+2026-01-29 21:03:39 - src.docuflow.vision - INFO - Successfully processed PDF: 29328 -> 9152 bytes
+2026-01-29 21:03:39 - src.main - INFO - Processed label for TID 16390174926
+2026-01-29 21:03:39 - src.docuflow.vision - INFO - Successfully processed PDF: 21033 -> 11815 bytes
+2026-01-29 21:03:39 - src.main - INFO - Processed label for TID 16405895353
+2026-01-29 21:03:39 - src.docuflow.vision - INFO - Successfully processed PDF: 20874 -> 11507 bytes
+2026-01-29 21:03:39 - src.main - INFO - Processed label for TID 16371762056
+2026-01-29 21:03:40 - src.docuflow.vision - INFO - Successfully processed PDF: 20735 -> 10924 bytes
+2026-01-29 21:03:40 - src.main - INFO - Processed label for TID 16367964766
+2026-01-29 21:03:40 - src.main - INFO - Processed 6 shipping label(s)
+2026-01-29 21:03:40 - src.main - INFO - 
+=== Step 3: Matching and Generating Labels ===
+2026-01-29 21:03:40 - src.docuflow.generator - INFO - Generated label with items overlay for TID 16399838501 (1 item(s))
+2026-01-29 21:03:40 - src.main - INFO - Saved enhanced label: static/services/labels/16399838501_Vinted-Label-16399838501.pdf
+2026-01-29 21:03:40 - src.main - INFO - Matched transaction 16399838501: 1 item(s), 2 message(s)
+2026-01-29 21:03:40 - src.docuflow.generator - INFO - Generated label with items overlay for TID 16413326734 (1 item(s))
+2026-01-29 21:03:40 - src.main - INFO - Saved enhanced label: static/services/labels/16413326734_Vinted-Label-16413326734.pdf
+2026-01-29 21:03:40 - src.main - INFO - Matched transaction 16413326734: 1 item(s), 2 message(s)
+2026-01-29 21:03:40 - src.docuflow.generator - INFO - Generated label with items overlay for TID 16390174926 (1 item(s))
+2026-01-29 21:03:40 - src.main - INFO - Saved enhanced label: static/services/labels/16390174926_Vinted-Digital-Label-16390174926.pdf
+2026-01-29 21:03:40 - src.main - INFO - Matched transaction 16390174926: 1 item(s), 2 message(s)
+2026-01-29 21:03:40 - src.main - WARNING - No return form found for label TID 16405895353, skipping
+2026-01-29 21:03:40 - src.docuflow.generator - INFO - Generated label with items overlay for TID 16371762056 (1 item(s))
+2026-01-29 21:03:40 - src.main - INFO - Saved enhanced label: static/services/labels/16371762056_Vinted-Label-16371762056.pdf
+2026-01-29 21:03:40 - src.main - INFO - Matched transaction 16371762056: 1 item(s), 2 message(s)
+2026-01-29 21:03:40 - src.main - WARNING - No return form found for label TID 16367964766, skipping
+2026-01-29 21:03:40 - src.main - INFO - Successfully matched 4 transaction(s)
+2026-01-29 21:03:40 - src.main - INFO - 
+=== Step 4: Printing Labels ===
+2026-01-29 21:03:40 - src.main - INFO - Printing 4 label(s)
+2026-01-29 21:03:40 - src.services.printer - INFO - Starting batch print job: 4 label(s)
+2026-01-29 21:03:40 - src.services.printer - INFO - [DRY-RUN] Saved: 16399838501 -> logs/print_debug/20260129_210340_16399838501_16399838501_Vinted-Label-16399838501.pdf
+2026-01-29 21:03:40 - src.services.printer - INFO - [DRY-RUN] Saved: 16413326734 -> logs/print_debug/20260129_210340_16413326734_16413326734_Vinted-Label-16413326734.pdf
+2026-01-29 21:03:41 - src.services.printer - INFO - [DRY-RUN] Saved: 16390174926 -> logs/print_debug/20260129_210341_16390174926_16390174926_Vinted-Digital-Label-16390174926.pdf
+2026-01-29 21:03:41 - src.services.printer - INFO - [DRY-RUN] Saved: 16371762056 -> logs/print_debug/20260129_210341_16371762056_16371762056_Vinted-Label-16371762056.pdf
+2026-01-29 21:03:41 - src.services.printer - INFO - Batch dry-run complete: 4/4 saved
+2026-01-29 21:03:41 - src.main - INFO - 
+=== Step 5: Cleanup ===
+2026-01-29 21:03:41 - src.main - INFO - Cleaning up 8 message(s)
+2026-01-29 21:03:41 - src.services.gmail - INFO - Trashing 8 message(s)
+2026-01-29 21:03:42 - src.services.gmail - INFO - Trash operation complete: 8/8 successful
+2026-01-29 21:03:42 - src.main - INFO - Cleanup complete: 8 messages trashed, 4 files deleted
+2026-01-29 21:03:42 - src.main - INFO - 
+============================================================
+2026-01-29 21:03:42 - src.main - INFO - Pipeline Execution Complete
+2026-01-29 21:03:42 - src.main - INFO - ============================================================
+2026-01-29 21:03:42 - src.main - INFO - Summary: {'success': True, 'return_forms_found': 6, 'labels_found': 6, 'transactions_matched': 4, 'labels_printed': 4, 'messages_trashed': 8, 'files_cleaned': 4, 'dry_run': True}
+2026-01-29 21:03:42 - src.services.database - INFO - Ended pipeline run 1: 4 processed, 2 failed
+2026-01-29 21:04:41 - src.logging_config - INFO - ============================================================
+2026-01-29 21:04:41 - src.logging_config - INFO - VintedOS Logging Initialized
+2026-01-29 21:04:41 - src.logging_config - INFO - Log Level: INFO
+2026-01-29 21:04:41 - src.logging_config - INFO - Console Handler: True
+2026-01-29 21:04:41 - src.logging_config - INFO - File Handler: True
+2026-01-29 21:04:41 - src.logging_config - INFO - ============================================================
+2026-01-29 21:04:42 - src.main - INFO - Initializing VintedOS Pipeline
+2026-01-29 21:04:42 - src.services.database - INFO - Database engine initialized: vinted_os.db
+2026-01-29 21:04:42 - src.services.database - INFO - Database tables created/verified
+2026-01-29 21:04:42 - src.services.database - INFO - WAL mode enabled successfully
+2026-01-29 21:04:42 - src.services.printer - INFO - Dry-run mode enabled. PDFs will be saved to: logs/print_debug
+2026-01-29 21:04:42 - src.services.database - INFO - Started pipeline run 2
+2026-01-29 21:04:42 - src.main - INFO - Pipeline initialized (dry_run=True, run_id=2)
+2026-01-29 21:04:42 - src.main - INFO - ============================================================
+2026-01-29 21:04:42 - src.main - INFO - Starting VintedOS ETL Pipeline
+2026-01-29 21:04:42 - src.main - INFO - ============================================================
+2026-01-29 21:04:42 - src.main - INFO - 
+=== Step 1: Processing Return Forms ===
+2026-01-29 21:04:42 - src.services.gmail - INFO - Initializing Gmail API service
+2026-01-29 21:04:42 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-01-29 21:04:42 - src.services.gmail - INFO - Gmail API service initialized successfully
+2026-01-29 21:04:42 - src.services.gmail - INFO - Searching for messages: query='has:attachment filename:pdf', pattern='^Order-return-form'
+2026-01-29 21:04:43 - src.services.gmail - INFO - Found 4 matching attachment(s)
+2026-01-29 21:04:43 - src.main - INFO - Found 4 return form attachment(s)
+2026-01-29 21:04:43 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:04:43 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:04:43 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:04:43 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:04:43 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:04:43 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:04:43 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:04:43 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:04:43 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:04:43 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:04:43 - src.docuflow.parser - INFO - Parsed 1 items from text (TID: 14880032282)
+2026-01-29 21:04:43 - src.docuflow.parser - INFO - PDF parsing complete: TID=14880032282, Items=1
+2026-01-29 21:04:43 - src.main - INFO - Parsed return form for TID 14880032282: 1 item(s)
+2026-01-29 21:04:43 - src.services.database - INFO - Created transaction 14880032282 (DB ID: 7) with 1 items
+2026-01-29 21:04:43 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:04:43 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:04:43 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:04:43 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:04:43 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:04:43 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:04:43 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:04:43 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:04:43 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:04:43 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:04:43 - src.docuflow.parser - INFO - Parsed 1 items from text (TID: 16367964766)
+2026-01-29 21:04:43 - src.docuflow.parser - INFO - PDF parsing complete: TID=16367964766, Items=1
+2026-01-29 21:04:43 - src.main - INFO - Parsed return form for TID 16367964766: 1 item(s)
+2026-01-29 21:04:43 - src.services.database - INFO - Created transaction 16367964766 (DB ID: 8) with 1 items
+2026-01-29 21:04:43 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:04:43 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:04:43 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:04:43 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:04:43 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:04:43 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:04:43 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:04:43 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:04:43 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:04:43 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:04:43 - src.docuflow.parser - INFO - Parsed 1 items from text (TID: 16405895353)
+2026-01-29 21:04:43 - src.docuflow.parser - INFO - PDF parsing complete: TID=16405895353, Items=1
+2026-01-29 21:04:43 - src.main - INFO - Parsed return form for TID 16405895353: 1 item(s)
+2026-01-29 21:04:43 - src.services.database - INFO - Created transaction 16405895353 (DB ID: 9) with 1 items
+2026-01-29 21:04:44 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:04:44 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:04:44 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:04:44 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:04:44 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:04:44 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:04:44 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:04:44 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:04:44 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:04:44 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-01-29 21:04:44 - src.docuflow.parser - INFO - Parsed 1 items from text (TID: 16444339295)
+2026-01-29 21:04:44 - src.docuflow.parser - INFO - PDF parsing complete: TID=16444339295, Items=1
+2026-01-29 21:04:44 - src.main - INFO - Parsed return form for TID 16444339295: 1 item(s)
+2026-01-29 21:04:44 - src.services.database - INFO - Created transaction 16444339295 (DB ID: 10) with 1 items
+2026-01-29 21:04:44 - src.main - INFO - Parsed 4 return form(s)
+2026-01-29 21:04:44 - src.main - INFO - 
+=== Step 2: Processing Shipping Labels ===
+2026-01-29 21:04:44 - src.services.gmail - INFO - Searching for messages: query='has:attachment filename:pdf subject:'shipping label'', pattern='^Vinted-(?:Label|Digital-Label)'
+2026-01-29 21:04:44 - src.services.gmail - INFO - Found 2 matching attachment(s)
+2026-01-29 21:04:44 - src.main - INFO - Found 2 shipping label(s)
+2026-01-29 21:04:44 - src.docuflow.vision - INFO - Successfully processed PDF: 21033 -> 11815 bytes
+2026-01-29 21:04:44 - src.main - INFO - Processed label for TID 16405895353
+2026-01-29 21:04:45 - src.docuflow.vision - INFO - Successfully processed PDF: 20735 -> 10924 bytes
+2026-01-29 21:04:45 - src.main - INFO - Processed label for TID 16367964766
+2026-01-29 21:04:45 - src.main - INFO - Processed 2 shipping label(s)
+2026-01-29 21:04:45 - src.main - INFO - 
+=== Step 3: Matching and Generating Labels ===
+2026-01-29 21:04:45 - src.docuflow.generator - INFO - Generated label with items overlay for TID 16405895353 (1 item(s))
+2026-01-29 21:04:45 - src.main - INFO - Saved enhanced label: static/services/labels/16405895353_Vinted-Label-16405895353.pdf
+2026-01-29 21:04:45 - src.main - INFO - Matched transaction 16405895353: 1 item(s), 2 message(s)
+2026-01-29 21:04:45 - src.docuflow.generator - INFO - Generated label with items overlay for TID 16367964766 (1 item(s))
+2026-01-29 21:04:45 - src.main - INFO - Saved enhanced label: static/services/labels/16367964766_Vinted-Label-16367964766.pdf
+2026-01-29 21:04:45 - src.main - INFO - Matched transaction 16367964766: 1 item(s), 2 message(s)
+2026-01-29 21:04:45 - src.main - INFO - Successfully matched 2 transaction(s)
+2026-01-29 21:04:45 - src.main - INFO - 
+=== Step 4: Printing Labels ===
+2026-01-29 21:04:45 - src.main - INFO - Printing 2 label(s)
+2026-01-29 21:04:45 - src.services.printer - INFO - Starting batch print job: 2 label(s)
+2026-01-29 21:04:45 - src.services.printer - INFO - [DRY-RUN] Saved: 16405895353 -> logs/print_debug/20260129_210445_16405895353_16405895353_Vinted-Label-16405895353.pdf
+2026-01-29 21:04:45 - src.services.printer - INFO - [DRY-RUN] Saved: 16367964766 -> logs/print_debug/20260129_210445_16367964766_16367964766_Vinted-Label-16367964766.pdf
+2026-01-29 21:04:45 - src.services.printer - INFO - Batch dry-run complete: 2/2 saved
+2026-01-29 21:04:45 - src.main - INFO - 
+=== Step 5: Cleanup ===
+2026-01-29 21:04:45 - src.main - INFO - Cleaning up 4 message(s)
+2026-01-29 21:04:45 - src.services.gmail - INFO - Trashing 4 message(s)
+2026-01-29 21:04:46 - src.services.gmail - INFO - Trash operation complete: 4/4 successful
+2026-01-29 21:04:46 - src.main - INFO - Cleanup complete: 4 messages trashed, 2 files deleted
+2026-01-29 21:04:46 - src.main - INFO - 
+============================================================
+2026-01-29 21:04:46 - src.main - INFO - Pipeline Execution Complete
+2026-01-29 21:04:46 - src.main - INFO - ============================================================
+2026-01-29 21:04:46 - src.main - INFO - Summary: {'success': True, 'return_forms_found': 4, 'labels_found': 2, 'transactions_matched': 2, 'labels_printed': 2, 'messages_trashed': 4, 'files_cleaned': 2, 'dry_run': True}
+2026-01-29 21:04:46 - src.services.database - INFO - Ended pipeline run 2: 2 processed, 2 failed
+2026-02-02 08:39:26 - src.logging_config - INFO - ============================================================
+2026-02-02 08:39:26 - src.logging_config - INFO - VintedOS Logging Initialized
+2026-02-02 08:39:26 - src.logging_config - INFO - Log Level: INFO
+2026-02-02 08:39:26 - src.logging_config - INFO - Console Handler: True
+2026-02-02 08:39:26 - src.logging_config - INFO - File Handler: True
+2026-02-02 08:39:26 - src.logging_config - INFO - ============================================================
+2026-02-02 08:39:28 - src.main - INFO - Initializing VintedOS Pipeline
+2026-02-02 08:39:28 - src.services.database - INFO - Database engine initialized: mock_db.db
+2026-02-02 08:39:28 - src.services.database - INFO - Database tables created/verified
+2026-02-02 08:39:28 - src.services.database - INFO - WAL mode enabled successfully
+2026-02-02 08:39:28 - src.services.printer - INFO - Dry-run mode enabled. PDFs will be saved to: logs/print_debug
+2026-02-02 08:39:28 - src.services.database - INFO - Started pipeline run 4
+2026-02-02 08:39:28 - src.main - INFO - Pipeline initialized (dry_run=True, run_id=4)
+2026-02-02 08:39:28 - src.main - INFO - ============================================================
+2026-02-02 08:39:28 - src.main - INFO - Starting VintedOS ETL Pipeline
+2026-02-02 08:39:28 - src.main - INFO - ============================================================
+2026-02-02 08:39:28 - src.main - INFO - 
+=== Step 1: Processing Return Forms ===
+2026-02-02 08:39:28 - src.services.gmail - INFO - Initializing Gmail API service
+2026-02-02 08:39:28 - src.services.gmail - INFO - Refreshing expired credentials
+2026-02-02 08:39:29 - src.services.gmail - INFO - Saved credentials to token.json
+2026-02-02 08:39:29 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-02-02 08:39:29 - src.services.gmail - INFO - Gmail API service initialized successfully
+2026-02-02 08:39:29 - src.services.gmail - INFO - Searching for messages: query='has:attachment filename:pdf', pattern='^Order-return-form'
+2026-02-02 08:39:29 - src.services.gmail - INFO - Found 8 matching attachment(s)
+2026-02-02 08:39:29 - src.main - INFO - Found 8 return form attachment(s)
+2026-02-02 08:39:29 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:29 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:29 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:29 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:29 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:29 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:29 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:29 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:29 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:29 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:29 - src.docuflow.parser - INFO - Parsed 1 items from text (TID: 14880032282)
+2026-02-02 08:39:29 - src.docuflow.parser - INFO - PDF parsing complete: TID=14880032282, Items=1
+2026-02-02 08:39:29 - src.main - INFO - Parsed return form for TID 14880032282: 1 item(s)
+2026-02-02 08:39:29 - src.services.database - INFO - Created transaction 14880032282 (DB ID: 17) with 1 items
+2026-02-02 08:39:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:30 - src.docuflow.parser - INFO - Parsed 1 items from text (TID: 16367964766)
+2026-02-02 08:39:30 - src.docuflow.parser - INFO - PDF parsing complete: TID=16367964766, Items=1
+2026-02-02 08:39:30 - src.main - INFO - Parsed return form for TID 16367964766: 1 item(s)
+2026-02-02 08:39:30 - src.services.database - INFO - Created transaction 16367964766 (DB ID: 18) with 1 items
+2026-02-02 08:39:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:30 - src.docuflow.parser - INFO - Parsed 1 items from text (TID: 16371762056)
+2026-02-02 08:39:30 - src.docuflow.parser - INFO - PDF parsing complete: TID=16371762056, Items=1
+2026-02-02 08:39:30 - src.main - INFO - Parsed return form for TID 16371762056: 1 item(s)
+2026-02-02 08:39:30 - src.services.database - INFO - Created transaction 16371762056 (DB ID: 19) with 1 items
+2026-02-02 08:39:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:30 - src.docuflow.parser - INFO - Parsed 1 items from text (TID: 16390174926)
+2026-02-02 08:39:30 - src.docuflow.parser - INFO - PDF parsing complete: TID=16390174926, Items=1
+2026-02-02 08:39:30 - src.main - INFO - Parsed return form for TID 16390174926: 1 item(s)
+2026-02-02 08:39:30 - src.services.database - INFO - Created transaction 16390174926 (DB ID: 20) with 1 items
+2026-02-02 08:39:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:30 - src.docuflow.parser - INFO - Parsed 1 items from text (TID: 16399838501)
+2026-02-02 08:39:30 - src.docuflow.parser - INFO - PDF parsing complete: TID=16399838501, Items=1
+2026-02-02 08:39:30 - src.main - INFO - Parsed return form for TID 16399838501: 1 item(s)
+2026-02-02 08:39:30 - src.services.database - INFO - Created transaction 16399838501 (DB ID: 21) with 1 items
+2026-02-02 08:39:31 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:31 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:31 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:31 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:31 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:31 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:31 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:31 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:31 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:31 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:31 - src.docuflow.parser - INFO - Parsed 1 items from text (TID: 16405895353)
+2026-02-02 08:39:31 - src.docuflow.parser - INFO - PDF parsing complete: TID=16405895353, Items=1
+2026-02-02 08:39:31 - src.main - INFO - Parsed return form for TID 16405895353: 1 item(s)
+2026-02-02 08:39:31 - src.services.database - INFO - Created transaction 16405895353 (DB ID: 22) with 1 items
+2026-02-02 08:39:31 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:31 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:31 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:31 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:31 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:31 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:31 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:31 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:31 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:31 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:31 - src.docuflow.parser - INFO - Parsed 1 items from text (TID: 16413326734)
+2026-02-02 08:39:31 - src.docuflow.parser - INFO - PDF parsing complete: TID=16413326734, Items=1
+2026-02-02 08:39:31 - src.main - INFO - Parsed return form for TID 16413326734: 1 item(s)
+2026-02-02 08:39:31 - src.services.database - INFO - Created transaction 16413326734 (DB ID: 23) with 1 items
+2026-02-02 08:39:31 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:31 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:31 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:31 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:31 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:31 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:31 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:31 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:31 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:31 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:39:31 - src.docuflow.parser - INFO - Parsed 1 items from text (TID: 16444339295)
+2026-02-02 08:39:31 - src.docuflow.parser - INFO - PDF parsing complete: TID=16444339295, Items=1
+2026-02-02 08:39:31 - src.main - INFO - Parsed return form for TID 16444339295: 1 item(s)
+2026-02-02 08:39:31 - src.services.database - INFO - Created transaction 16444339295 (DB ID: 24) with 1 items
+2026-02-02 08:39:31 - src.main - INFO - Parsed 8 return form(s)
+2026-02-02 08:39:31 - src.main - INFO - 
+=== Step 2: Processing Shipping Labels ===
+2026-02-02 08:39:31 - src.services.gmail - INFO - Searching for messages: query='has:attachment filename:pdf subject:'shipping label'', pattern='^Vinted-(?:Label|Digital-Label)'
+2026-02-02 08:39:31 - src.services.gmail - INFO - Found 6 matching attachment(s)
+2026-02-02 08:39:31 - src.main - INFO - Found 6 shipping label(s)
+2026-02-02 08:39:35 - src.docuflow.vision - INFO - Successfully processed PDF: 21043 -> 11586 bytes
+2026-02-02 08:39:35 - src.main - INFO - Processed label for TID 16399838501
+2026-02-02 08:39:35 - src.docuflow.vision - INFO - Successfully processed PDF: 20380 -> 10521 bytes
+2026-02-02 08:39:35 - src.main - INFO - Processed label for TID 16413326734
+2026-02-02 08:39:36 - src.docuflow.vision - INFO - Successfully processed PDF: 29328 -> 9119 bytes
+2026-02-02 08:39:36 - src.main - INFO - Processed label for TID 16390174926
+2026-02-02 08:39:36 - src.docuflow.vision - INFO - Successfully processed PDF: 21033 -> 11782 bytes
+2026-02-02 08:39:36 - src.main - INFO - Processed label for TID 16405895353
+2026-02-02 08:39:36 - src.docuflow.vision - INFO - Successfully processed PDF: 20874 -> 11474 bytes
+2026-02-02 08:39:36 - src.main - INFO - Processed label for TID 16371762056
+2026-02-02 08:39:37 - src.docuflow.vision - INFO - Successfully processed PDF: 20735 -> 10891 bytes
+2026-02-02 08:39:37 - src.main - INFO - Processed label for TID 16367964766
+2026-02-02 08:39:37 - src.main - INFO - Processed 6 shipping label(s)
+2026-02-02 08:39:37 - src.main - INFO - 
+=== Step 3: Matching and Generating Labels ===
+2026-02-02 08:39:37 - src.docuflow.generator - INFO - Generated label with items overlay for TID 16399838501 (1 item(s))
+2026-02-02 08:39:37 - src.main - INFO - Saved enhanced label: static/services/labels/16399838501_Vinted-Label-16399838501.pdf
+2026-02-02 08:39:37 - src.main - INFO - Matched transaction 16399838501: 1 item(s), 2 message(s)
+2026-02-02 08:39:37 - src.docuflow.generator - INFO - Generated label with items overlay for TID 16413326734 (1 item(s))
+2026-02-02 08:39:37 - src.main - INFO - Saved enhanced label: static/services/labels/16413326734_Vinted-Label-16413326734.pdf
+2026-02-02 08:39:37 - src.main - INFO - Matched transaction 16413326734: 1 item(s), 2 message(s)
+2026-02-02 08:39:37 - src.docuflow.generator - INFO - Generated label with items overlay for TID 16390174926 (1 item(s))
+2026-02-02 08:39:37 - src.main - INFO - Saved enhanced label: static/services/labels/16390174926_Vinted-Digital-Label-16390174926.pdf
+2026-02-02 08:39:37 - src.main - INFO - Matched transaction 16390174926: 1 item(s), 2 message(s)
+2026-02-02 08:39:37 - src.docuflow.generator - INFO - Generated label with items overlay for TID 16405895353 (1 item(s))
+2026-02-02 08:39:37 - src.main - INFO - Saved enhanced label: static/services/labels/16405895353_Vinted-Label-16405895353.pdf
+2026-02-02 08:39:37 - src.main - INFO - Matched transaction 16405895353: 1 item(s), 2 message(s)
+2026-02-02 08:39:37 - src.docuflow.generator - INFO - Generated label with items overlay for TID 16371762056 (1 item(s))
+2026-02-02 08:39:37 - src.main - INFO - Saved enhanced label: static/services/labels/16371762056_Vinted-Label-16371762056.pdf
+2026-02-02 08:39:37 - src.main - INFO - Matched transaction 16371762056: 1 item(s), 2 message(s)
+2026-02-02 08:39:37 - src.docuflow.generator - INFO - Generated label with items overlay for TID 16367964766 (1 item(s))
+2026-02-02 08:39:37 - src.main - INFO - Saved enhanced label: static/services/labels/16367964766_Vinted-Label-16367964766.pdf
+2026-02-02 08:39:37 - src.main - INFO - Matched transaction 16367964766: 1 item(s), 2 message(s)
+2026-02-02 08:39:37 - src.main - INFO - Successfully matched 6 transaction(s)
+2026-02-02 08:39:37 - src.main - INFO - 
+=== Step 4: Printing Labels ===
+2026-02-02 08:39:37 - src.main - INFO - Printing 6 label(s)
+2026-02-02 08:39:37 - src.services.printer - INFO - Starting batch print job: 6 label(s)
+2026-02-02 08:39:37 - src.services.printer - INFO - [DRY-RUN] Saved: 16399838501 -> logs/print_debug/20260202_083937_16399838501_16399838501_Vinted-Label-16399838501.pdf
+2026-02-02 08:39:37 - src.services.printer - INFO - [DRY-RUN] Saved: 16413326734 -> logs/print_debug/20260202_083937_16413326734_16413326734_Vinted-Label-16413326734.pdf
+2026-02-02 08:39:38 - src.services.printer - INFO - [DRY-RUN] Saved: 16390174926 -> logs/print_debug/20260202_083938_16390174926_16390174926_Vinted-Digital-Label-16390174926.pdf
+2026-02-02 08:39:38 - src.services.printer - INFO - [DRY-RUN] Saved: 16405895353 -> logs/print_debug/20260202_083938_16405895353_16405895353_Vinted-Label-16405895353.pdf
+2026-02-02 08:39:39 - src.services.printer - INFO - [DRY-RUN] Saved: 16371762056 -> logs/print_debug/20260202_083939_16371762056_16371762056_Vinted-Label-16371762056.pdf
+2026-02-02 08:39:39 - src.services.printer - INFO - [DRY-RUN] Saved: 16367964766 -> logs/print_debug/20260202_083939_16367964766_16367964766_Vinted-Label-16367964766.pdf
+2026-02-02 08:39:39 - src.services.printer - INFO - Batch dry-run complete: 6/6 saved
+2026-02-02 08:39:39 - src.main - INFO - 
+=== Step 5: Cleanup ===
+2026-02-02 08:39:39 - src.main - INFO - Cleaning up 12 message(s)
+2026-02-02 08:39:39 - src.services.gmail - INFO - Trashing 12 message(s)
+2026-02-02 08:39:41 - src.services.gmail - INFO - Trash operation complete: 12/12 successful
+2026-02-02 08:39:41 - src.main - INFO - Cleanup complete: 12 messages trashed, 6 files deleted
+2026-02-02 08:39:41 - src.main - INFO - 
+============================================================
+2026-02-02 08:39:41 - src.main - INFO - Pipeline Execution Complete
+2026-02-02 08:39:41 - src.main - INFO - ============================================================
+2026-02-02 08:39:41 - src.main - INFO - Summary: {'success': True, 'return_forms_found': 8, 'labels_found': 6, 'transactions_matched': 6, 'labels_printed': 6, 'messages_trashed': 12, 'files_cleaned': 6, 'dry_run': True}
+2026-02-02 08:39:41 - src.services.database - INFO - Ended pipeline run 4: 6 processed, 2 failed
+2026-02-02 08:42:27 - src.logging_config - INFO - ============================================================
+2026-02-02 08:42:27 - src.logging_config - INFO - VintedOS Logging Initialized
+2026-02-02 08:42:27 - src.logging_config - INFO - Log Level: INFO
+2026-02-02 08:42:27 - src.logging_config - INFO - Console Handler: True
+2026-02-02 08:42:27 - src.logging_config - INFO - File Handler: True
+2026-02-02 08:42:27 - src.logging_config - INFO - ============================================================
+2026-02-02 08:42:29 - src.main - INFO - Initializing VintedOS Pipeline
+2026-02-02 08:42:29 - src.services.database - INFO - Database engine initialized: mock_db.db
+2026-02-02 08:42:29 - src.services.database - INFO - Database tables created/verified
+2026-02-02 08:42:29 - src.services.database - INFO - WAL mode enabled successfully
+2026-02-02 08:42:29 - src.services.printer - INFO - Dry-run mode enabled. PDFs will be saved to: logs/print_debug
+2026-02-02 08:42:29 - src.services.database - INFO - Started pipeline run 5
+2026-02-02 08:42:29 - src.main - INFO - Pipeline initialized (dry_run=True, run_id=5)
+2026-02-02 08:42:29 - src.main - INFO - ============================================================
+2026-02-02 08:42:29 - src.main - INFO - Starting VintedOS ETL Pipeline
+2026-02-02 08:42:29 - src.main - INFO - ============================================================
+2026-02-02 08:42:29 - src.main - INFO - 
+=== Step 1: Processing Return Forms ===
+2026-02-02 08:42:29 - src.services.gmail - INFO - Initializing Gmail API service
+2026-02-02 08:42:29 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-02-02 08:42:29 - src.services.gmail - INFO - Gmail API service initialized successfully
+2026-02-02 08:42:29 - src.services.gmail - INFO - Searching for messages: query='has:attachment filename:pdf', pattern='^Order-return-form'
+2026-02-02 08:42:29 - src.services.gmail - INFO - Found 8 matching attachment(s)
+2026-02-02 08:42:29 - src.main - INFO - Found 8 return form attachment(s)
+2026-02-02 08:42:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:30 - src.docuflow.parser - INFO - Parsed 1 items from text (TID: 14880032282)
+2026-02-02 08:42:30 - src.docuflow.parser - INFO - PDF parsing complete: TID=14880032282, Items=1
+2026-02-02 08:42:30 - src.main - INFO - Parsed return form for TID 14880032282: 1 item(s)
+2026-02-02 08:42:30 - src.services.database - INFO - Created transaction 14880032282 (DB ID: 25) with 1 items
+2026-02-02 08:42:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:30 - src.docuflow.parser - INFO - Parsed 1 items from text (TID: 16367964766)
+2026-02-02 08:42:30 - src.docuflow.parser - INFO - PDF parsing complete: TID=16367964766, Items=1
+2026-02-02 08:42:30 - src.main - INFO - Parsed return form for TID 16367964766: 1 item(s)
+2026-02-02 08:42:30 - src.services.database - INFO - Created transaction 16367964766 (DB ID: 26) with 1 items
+2026-02-02 08:42:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:30 - src.docuflow.parser - INFO - Parsed 1 items from text (TID: 16371762056)
+2026-02-02 08:42:30 - src.docuflow.parser - INFO - PDF parsing complete: TID=16371762056, Items=1
+2026-02-02 08:42:30 - src.main - INFO - Parsed return form for TID 16371762056: 1 item(s)
+2026-02-02 08:42:30 - src.services.database - INFO - Created transaction 16371762056 (DB ID: 27) with 1 items
+2026-02-02 08:42:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:30 - src.docuflow.parser - INFO - Parsed 1 items from text (TID: 16390174926)
+2026-02-02 08:42:30 - src.docuflow.parser - INFO - PDF parsing complete: TID=16390174926, Items=1
+2026-02-02 08:42:30 - src.main - INFO - Parsed return form for TID 16390174926: 1 item(s)
+2026-02-02 08:42:30 - src.services.database - INFO - Created transaction 16390174926 (DB ID: 28) with 1 items
+2026-02-02 08:42:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:30 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:30 - src.docuflow.parser - INFO - Parsed 1 items from text (TID: 16399838501)
+2026-02-02 08:42:30 - src.docuflow.parser - INFO - PDF parsing complete: TID=16399838501, Items=1
+2026-02-02 08:42:30 - src.main - INFO - Parsed return form for TID 16399838501: 1 item(s)
+2026-02-02 08:42:30 - src.services.database - INFO - Created transaction 16399838501 (DB ID: 29) with 1 items
+2026-02-02 08:42:31 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:31 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:31 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:31 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:31 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:31 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:31 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:31 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:31 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:31 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:31 - src.docuflow.parser - INFO - Parsed 1 items from text (TID: 16405895353)
+2026-02-02 08:42:31 - src.docuflow.parser - INFO - PDF parsing complete: TID=16405895353, Items=1
+2026-02-02 08:42:31 - src.main - INFO - Parsed return form for TID 16405895353: 1 item(s)
+2026-02-02 08:42:31 - src.services.database - INFO - Created transaction 16405895353 (DB ID: 30) with 1 items
+2026-02-02 08:42:31 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:31 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:31 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:31 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:31 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:31 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:31 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:31 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:31 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:31 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:31 - src.docuflow.parser - INFO - Parsed 1 items from text (TID: 16413326734)
+2026-02-02 08:42:31 - src.docuflow.parser - INFO - PDF parsing complete: TID=16413326734, Items=1
+2026-02-02 08:42:31 - src.main - INFO - Parsed return form for TID 16413326734: 1 item(s)
+2026-02-02 08:42:31 - src.services.database - INFO - Created transaction 16413326734 (DB ID: 31) with 1 items
+2026-02-02 08:42:31 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:31 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:31 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:31 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:31 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:31 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:31 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:31 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:31 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:31 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:42:31 - src.docuflow.parser - INFO - Parsed 1 items from text (TID: 16444339295)
+2026-02-02 08:42:31 - src.docuflow.parser - INFO - PDF parsing complete: TID=16444339295, Items=1
+2026-02-02 08:42:31 - src.main - INFO - Parsed return form for TID 16444339295: 1 item(s)
+2026-02-02 08:42:31 - src.services.database - INFO - Created transaction 16444339295 (DB ID: 32) with 1 items
+2026-02-02 08:42:31 - src.main - INFO - Parsed 8 return form(s)
+2026-02-02 08:42:31 - src.main - INFO - 
+=== Step 2: Processing Shipping Labels ===
+2026-02-02 08:42:31 - src.services.gmail - INFO - Searching for messages: query='has:attachment filename:pdf subject:'shipping label'', pattern='^Vinted-(?:Label|Digital-Label)'
+2026-02-02 08:42:31 - src.services.gmail - INFO - Found 6 matching attachment(s)
+2026-02-02 08:42:31 - src.main - INFO - Found 6 shipping label(s)
+2026-02-02 08:42:32 - src.docuflow.vision - INFO - Successfully processed PDF: 21043 -> 11586 bytes
+2026-02-02 08:42:32 - src.main - INFO - Processed label for TID 16399838501
+2026-02-02 08:42:32 - src.docuflow.vision - INFO - Successfully processed PDF: 20380 -> 10521 bytes
+2026-02-02 08:42:32 - src.main - INFO - Processed label for TID 16413326734
+2026-02-02 08:42:33 - src.docuflow.vision - INFO - Successfully processed PDF: 29328 -> 9119 bytes
+2026-02-02 08:42:33 - src.main - INFO - Processed label for TID 16390174926
+2026-02-02 08:42:33 - src.docuflow.vision - INFO - Successfully processed PDF: 21033 -> 11782 bytes
+2026-02-02 08:42:33 - src.main - INFO - Processed label for TID 16405895353
+2026-02-02 08:42:33 - src.docuflow.vision - INFO - Successfully processed PDF: 20874 -> 11474 bytes
+2026-02-02 08:42:33 - src.main - INFO - Processed label for TID 16371762056
+2026-02-02 08:42:34 - src.docuflow.vision - INFO - Successfully processed PDF: 20735 -> 10891 bytes
+2026-02-02 08:42:34 - src.main - INFO - Processed label for TID 16367964766
+2026-02-02 08:42:34 - src.main - INFO - Processed 6 shipping label(s)
+2026-02-02 08:42:34 - src.main - INFO - 
+=== Step 3: Matching and Generating Labels ===
+2026-02-02 08:42:34 - src.docuflow.generator - INFO - Generated label with items overlay for TID 16399838501 (1 item(s))
+2026-02-02 08:42:34 - src.main - INFO - Saved enhanced label: static/services/labels/16399838501_Vinted-Label-16399838501.pdf
+2026-02-02 08:42:34 - src.main - INFO - Matched transaction 16399838501: 1 item(s), 2 message(s)
+2026-02-02 08:42:34 - src.docuflow.generator - INFO - Generated label with items overlay for TID 16413326734 (1 item(s))
+2026-02-02 08:42:34 - src.main - INFO - Saved enhanced label: static/services/labels/16413326734_Vinted-Label-16413326734.pdf
+2026-02-02 08:42:34 - src.main - INFO - Matched transaction 16413326734: 1 item(s), 2 message(s)
+2026-02-02 08:42:34 - src.docuflow.generator - INFO - Generated label with items overlay for TID 16390174926 (1 item(s))
+2026-02-02 08:42:34 - src.main - INFO - Saved enhanced label: static/services/labels/16390174926_Vinted-Digital-Label-16390174926.pdf
+2026-02-02 08:42:34 - src.main - INFO - Matched transaction 16390174926: 1 item(s), 2 message(s)
+2026-02-02 08:42:34 - src.docuflow.generator - INFO - Generated label with items overlay for TID 16405895353 (1 item(s))
+2026-02-02 08:42:34 - src.main - INFO - Saved enhanced label: static/services/labels/16405895353_Vinted-Label-16405895353.pdf
+2026-02-02 08:42:34 - src.main - INFO - Matched transaction 16405895353: 1 item(s), 2 message(s)
+2026-02-02 08:42:34 - src.docuflow.generator - INFO - Generated label with items overlay for TID 16371762056 (1 item(s))
+2026-02-02 08:42:34 - src.main - INFO - Saved enhanced label: static/services/labels/16371762056_Vinted-Label-16371762056.pdf
+2026-02-02 08:42:34 - src.main - INFO - Matched transaction 16371762056: 1 item(s), 2 message(s)
+2026-02-02 08:42:34 - src.docuflow.generator - INFO - Generated label with items overlay for TID 16367964766 (1 item(s))
+2026-02-02 08:42:34 - src.main - INFO - Saved enhanced label: static/services/labels/16367964766_Vinted-Label-16367964766.pdf
+2026-02-02 08:42:34 - src.main - INFO - Matched transaction 16367964766: 1 item(s), 2 message(s)
+2026-02-02 08:42:34 - src.main - INFO - Successfully matched 6 transaction(s)
+2026-02-02 08:42:34 - src.main - INFO - 
+=== Step 4: Printing Labels ===
+2026-02-02 08:42:34 - src.main - INFO - Printing 6 label(s)
+2026-02-02 08:42:34 - src.services.printer - INFO - Starting batch print job: 6 label(s)
+2026-02-02 08:42:34 - src.services.printer - INFO - [DRY-RUN] Saved: 16399838501 -> logs/print_debug/20260202_084234_16399838501_16399838501_Vinted-Label-16399838501.pdf
+2026-02-02 08:42:34 - src.services.printer - INFO - [DRY-RUN] Saved: 16413326734 -> logs/print_debug/20260202_084234_16413326734_16413326734_Vinted-Label-16413326734.pdf
+2026-02-02 08:42:35 - src.services.printer - INFO - [DRY-RUN] Saved: 16390174926 -> logs/print_debug/20260202_084235_16390174926_16390174926_Vinted-Digital-Label-16390174926.pdf
+2026-02-02 08:42:35 - src.services.printer - INFO - [DRY-RUN] Saved: 16405895353 -> logs/print_debug/20260202_084235_16405895353_16405895353_Vinted-Label-16405895353.pdf
+2026-02-02 08:42:36 - src.services.printer - INFO - [DRY-RUN] Saved: 16371762056 -> logs/print_debug/20260202_084236_16371762056_16371762056_Vinted-Label-16371762056.pdf
+2026-02-02 08:42:36 - src.services.printer - INFO - [DRY-RUN] Saved: 16367964766 -> logs/print_debug/20260202_084236_16367964766_16367964766_Vinted-Label-16367964766.pdf
+2026-02-02 08:42:36 - src.services.printer - INFO - Batch dry-run complete: 6/6 saved
+2026-02-02 08:42:36 - src.main - INFO - 
+=== Step 5: Cleanup ===
+2026-02-02 08:42:36 - src.main - INFO - Cleaning up 12 message(s)
+2026-02-02 08:42:36 - src.services.gmail - INFO - Trashing 12 message(s)
+2026-02-02 08:42:38 - src.services.gmail - INFO - Trash operation complete: 12/12 successful
+2026-02-02 08:42:38 - src.main - INFO - Cleanup complete: 12 messages trashed, 6 files preserved
+2026-02-02 08:42:38 - src.main - INFO - 
+============================================================
+2026-02-02 08:42:38 - src.main - INFO - Pipeline Execution Complete
+2026-02-02 08:42:38 - src.main - INFO - ============================================================
+2026-02-02 08:42:38 - src.main - INFO - Summary: {'success': True, 'return_forms_found': 8, 'labels_found': 6, 'transactions_matched': 6, 'labels_printed': 6, 'messages_trashed': 12, 'files_cleaned': 6, 'dry_run': True}
+2026-02-02 08:42:38 - src.services.database - INFO - Ended pipeline run 5: 6 processed, 2 failed
+2026-02-02 08:48:18 - src.logging_config - INFO - ============================================================
+2026-02-02 08:48:18 - src.logging_config - INFO - VintedOS Logging Initialized
+2026-02-02 08:48:18 - src.logging_config - INFO - Log Level: INFO
+2026-02-02 08:48:18 - src.logging_config - INFO - Console Handler: True
+2026-02-02 08:48:18 - src.logging_config - INFO - File Handler: True
+2026-02-02 08:48:18 - src.logging_config - INFO - ============================================================
+2026-02-02 08:48:19 - src.main - INFO - Initializing VintedOS Pipeline
+2026-02-02 08:48:19 - src.services.database - INFO - Database engine initialized: mock_db.db
+2026-02-02 08:48:19 - src.services.database - INFO - Database tables created/verified
+2026-02-02 08:48:19 - src.services.database - INFO - WAL mode enabled successfully
+2026-02-02 08:48:19 - src.services.printer - INFO - Dry-run mode enabled. PDFs will be saved to: logs/print_debug
+2026-02-02 08:48:19 - src.services.database - INFO - Started pipeline run 6
+2026-02-02 08:48:19 - src.main - INFO - Pipeline initialized (dry_run=True, run_id=6)
+2026-02-02 08:48:19 - src.main - INFO - ============================================================
+2026-02-02 08:48:19 - src.main - INFO - Starting VintedOS ETL Pipeline
+2026-02-02 08:48:19 - src.main - INFO - ============================================================
+2026-02-02 08:48:19 - src.main - INFO - 
+=== Step 1: Processing Return Forms ===
+2026-02-02 08:48:19 - src.services.gmail - INFO - Initializing Gmail API service
+2026-02-02 08:48:19 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-02-02 08:48:19 - src.services.gmail - INFO - Gmail API service initialized successfully
+2026-02-02 08:48:19 - src.services.gmail - INFO - Searching for messages: query='has:attachment filename:pdf', pattern='^Order-return-form'
+2026-02-02 08:48:20 - src.services.gmail - INFO - Found 8 matching attachment(s)
+2026-02-02 08:48:20 - src.main - INFO - Found 8 return form attachment(s)
+2026-02-02 08:48:20 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:20 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:20 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:20 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:20 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:20 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:20 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:20 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:20 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:20 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:20 - src.docuflow.parser - INFO - Parsed 1 items from text (TID: 14880032282)
+2026-02-02 08:48:20 - src.docuflow.parser - INFO - PDF parsing complete: TID=14880032282, Items=1
+2026-02-02 08:48:20 - src.main - INFO - Parsed return form for TID 14880032282: 1 item(s)
+2026-02-02 08:48:20 - src.services.database - INFO - Created transaction 14880032282 (DB ID: 33) with 1 items
+2026-02-02 08:48:20 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:20 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:20 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:20 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:20 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:20 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:20 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:20 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:20 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:20 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:20 - src.docuflow.parser - INFO - Parsed 1 items from text (TID: 16367964766)
+2026-02-02 08:48:20 - src.docuflow.parser - INFO - PDF parsing complete: TID=16367964766, Items=1
+2026-02-02 08:48:20 - src.main - INFO - Parsed return form for TID 16367964766: 1 item(s)
+2026-02-02 08:48:20 - src.services.database - INFO - Created transaction 16367964766 (DB ID: 34) with 1 items
+2026-02-02 08:48:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:21 - src.docuflow.parser - INFO - Parsed 1 items from text (TID: 16371762056)
+2026-02-02 08:48:21 - src.docuflow.parser - INFO - PDF parsing complete: TID=16371762056, Items=1
+2026-02-02 08:48:21 - src.main - INFO - Parsed return form for TID 16371762056: 1 item(s)
+2026-02-02 08:48:21 - src.services.database - INFO - Created transaction 16371762056 (DB ID: 35) with 1 items
+2026-02-02 08:48:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:21 - src.docuflow.parser - INFO - Parsed 1 items from text (TID: 16390174926)
+2026-02-02 08:48:21 - src.docuflow.parser - INFO - PDF parsing complete: TID=16390174926, Items=1
+2026-02-02 08:48:21 - src.main - INFO - Parsed return form for TID 16390174926: 1 item(s)
+2026-02-02 08:48:21 - src.services.database - INFO - Created transaction 16390174926 (DB ID: 36) with 1 items
+2026-02-02 08:48:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:21 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:21 - src.docuflow.parser - INFO - Parsed 1 items from text (TID: 16399838501)
+2026-02-02 08:48:21 - src.docuflow.parser - INFO - PDF parsing complete: TID=16399838501, Items=1
+2026-02-02 08:48:21 - src.main - INFO - Parsed return form for TID 16399838501: 1 item(s)
+2026-02-02 08:48:21 - src.services.database - INFO - Created transaction 16399838501 (DB ID: 37) with 1 items
+2026-02-02 08:48:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:22 - src.docuflow.parser - INFO - Parsed 1 items from text (TID: 16405895353)
+2026-02-02 08:48:22 - src.docuflow.parser - INFO - PDF parsing complete: TID=16405895353, Items=1
+2026-02-02 08:48:22 - src.main - INFO - Parsed return form for TID 16405895353: 1 item(s)
+2026-02-02 08:48:22 - src.services.database - INFO - Created transaction 16405895353 (DB ID: 38) with 1 items
+2026-02-02 08:48:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:22 - src.docuflow.parser - INFO - Parsed 1 items from text (TID: 16413326734)
+2026-02-02 08:48:22 - src.docuflow.parser - INFO - PDF parsing complete: TID=16413326734, Items=1
+2026-02-02 08:48:22 - src.main - INFO - Parsed return form for TID 16413326734: 1 item(s)
+2026-02-02 08:48:22 - src.services.database - INFO - Created transaction 16413326734 (DB ID: 39) with 1 items
+2026-02-02 08:48:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:22 - src.docuflow.parser - WARNING - No transaction ID found in text
+2026-02-02 08:48:22 - src.docuflow.parser - INFO - Parsed 1 items from text (TID: 16444339295)
+2026-02-02 08:48:22 - src.docuflow.parser - INFO - PDF parsing complete: TID=16444339295, Items=1
+2026-02-02 08:48:22 - src.main - INFO - Parsed return form for TID 16444339295: 1 item(s)
+2026-02-02 08:48:22 - src.services.database - INFO - Created transaction 16444339295 (DB ID: 40) with 1 items
+2026-02-02 08:48:22 - src.main - INFO - Parsed 8 return form(s)
+2026-02-02 08:48:22 - src.main - INFO - 
+=== Step 2: Processing Shipping Labels ===
+2026-02-02 08:48:22 - src.services.gmail - INFO - Searching for messages: query='has:attachment filename:pdf subject:'shipping label'', pattern='^Vinted-(?:Label|Digital-Label)'
+2026-02-02 08:48:22 - src.services.gmail - INFO - Found 6 matching attachment(s)
+2026-02-02 08:48:22 - src.main - INFO - Found 6 shipping label(s)
+2026-02-02 08:48:23 - src.docuflow.vision - INFO - Successfully processed PDF: 21043 -> 11586 bytes
+2026-02-02 08:48:23 - src.main - INFO - Processed label for TID 16399838501
+2026-02-02 08:48:23 - src.docuflow.vision - INFO - Successfully processed PDF: 20380 -> 10521 bytes
+2026-02-02 08:48:23 - src.main - INFO - Processed label for TID 16413326734
+2026-02-02 08:48:24 - src.docuflow.vision - INFO - Successfully processed PDF: 29328 -> 9119 bytes
+2026-02-02 08:48:24 - src.main - INFO - Processed label for TID 16390174926
+2026-02-02 08:48:24 - src.docuflow.vision - INFO - Successfully processed PDF: 21033 -> 11782 bytes
+2026-02-02 08:48:24 - src.main - INFO - Processed label for TID 16405895353
+2026-02-02 08:48:24 - src.docuflow.vision - INFO - Successfully processed PDF: 20874 -> 11474 bytes
+2026-02-02 08:48:24 - src.main - INFO - Processed label for TID 16371762056
+2026-02-02 08:48:25 - src.docuflow.vision - INFO - Successfully processed PDF: 20735 -> 10891 bytes
+2026-02-02 08:48:25 - src.main - INFO - Processed label for TID 16367964766
+2026-02-02 08:48:25 - src.main - INFO - Processed 6 shipping label(s)
+2026-02-02 08:48:25 - src.main - INFO - 
+=== Step 3: Matching and Generating Labels ===
+2026-02-02 08:48:25 - src.docuflow.generator - INFO - Generated label with items overlay for TID 16399838501 (1 item(s))
+2026-02-02 08:48:25 - src.main - INFO - Saved enhanced label: static/services/labels/16399838501_Vinted-Label-16399838501.pdf
+2026-02-02 08:48:25 - src.main - INFO - Matched transaction 16399838501: 1 item(s), 2 message(s)
+2026-02-02 08:48:25 - src.docuflow.generator - INFO - Generated label with items overlay for TID 16413326734 (1 item(s))
+2026-02-02 08:48:25 - src.main - INFO - Saved enhanced label: static/services/labels/16413326734_Vinted-Label-16413326734.pdf
+2026-02-02 08:48:25 - src.main - INFO - Matched transaction 16413326734: 1 item(s), 2 message(s)
+2026-02-02 08:48:25 - src.docuflow.generator - INFO - Generated label with items overlay for TID 16390174926 (1 item(s))
+2026-02-02 08:48:25 - src.main - INFO - Saved enhanced label: static/services/labels/16390174926_Vinted-Digital-Label-16390174926.pdf
+2026-02-02 08:48:25 - src.main - INFO - Matched transaction 16390174926: 1 item(s), 2 message(s)
+2026-02-02 08:48:25 - src.docuflow.generator - INFO - Generated label with items overlay for TID 16405895353 (1 item(s))
+2026-02-02 08:48:25 - src.main - INFO - Saved enhanced label: static/services/labels/16405895353_Vinted-Label-16405895353.pdf
+2026-02-02 08:48:25 - src.main - INFO - Matched transaction 16405895353: 1 item(s), 2 message(s)
+2026-02-02 08:48:25 - src.docuflow.generator - INFO - Generated label with items overlay for TID 16371762056 (1 item(s))
+2026-02-02 08:48:25 - src.main - INFO - Saved enhanced label: static/services/labels/16371762056_Vinted-Label-16371762056.pdf
+2026-02-02 08:48:25 - src.main - INFO - Matched transaction 16371762056: 1 item(s), 2 message(s)
+2026-02-02 08:48:25 - src.docuflow.generator - INFO - Generated label with items overlay for TID 16367964766 (1 item(s))
+2026-02-02 08:48:25 - src.main - INFO - Saved enhanced label: static/services/labels/16367964766_Vinted-Label-16367964766.pdf
+2026-02-02 08:48:25 - src.main - INFO - Matched transaction 16367964766: 1 item(s), 2 message(s)
+2026-02-02 08:48:25 - src.main - INFO - Successfully matched 6 transaction(s)
+2026-02-02 08:48:25 - src.main - INFO - 
+=== Step 4: Printing Labels ===
+2026-02-02 08:48:25 - src.main - INFO - Printing 6 label(s)
+2026-02-02 08:48:25 - src.services.printer - INFO - Starting batch print job: 6 label(s)
+2026-02-02 08:48:25 - src.services.printer - INFO - [DRY-RUN] Saved: 16399838501 -> logs/print_debug/20260202_084825_16399838501_16399838501_Vinted-Label-16399838501.pdf
+2026-02-02 08:48:25 - src.services.printer - INFO - [DRY-RUN] Saved: 16413326734 -> logs/print_debug/20260202_084825_16413326734_16413326734_Vinted-Label-16413326734.pdf
+2026-02-02 08:48:26 - src.services.printer - INFO - [DRY-RUN] Saved: 16390174926 -> logs/print_debug/20260202_084826_16390174926_16390174926_Vinted-Digital-Label-16390174926.pdf
+2026-02-02 08:48:26 - src.services.printer - INFO - [DRY-RUN] Saved: 16405895353 -> logs/print_debug/20260202_084826_16405895353_16405895353_Vinted-Label-16405895353.pdf
+2026-02-02 08:48:27 - src.services.printer - INFO - [DRY-RUN] Saved: 16371762056 -> logs/print_debug/20260202_084827_16371762056_16371762056_Vinted-Label-16371762056.pdf
+2026-02-02 08:48:27 - src.services.printer - INFO - [DRY-RUN] Saved: 16367964766 -> logs/print_debug/20260202_084827_16367964766_16367964766_Vinted-Label-16367964766.pdf
+2026-02-02 08:48:27 - src.services.printer - INFO - Batch dry-run complete: 6/6 saved
+2026-02-02 08:48:27 - src.main - INFO - 
+=== Step 5: Cleanup ===
+2026-02-02 08:48:27 - src.main - INFO - Cleaning up 12 message(s)
+2026-02-02 08:48:27 - src.services.gmail - INFO - Trashing 12 message(s)
+2026-02-02 08:48:29 - src.services.gmail - INFO - Trash operation complete: 12/12 successful
+2026-02-02 08:48:29 - src.main - INFO - Cleanup complete: 12 messages trashed, 6 files deleted
+2026-02-02 08:48:29 - src.main - INFO - 
+============================================================
+2026-02-02 08:48:29 - src.main - INFO - Pipeline Execution Complete
+2026-02-02 08:48:29 - src.main - INFO - ============================================================
+2026-02-02 08:48:29 - src.main - INFO - Summary: {'success': True, 'return_forms_found': 8, 'labels_found': 6, 'transactions_matched': 6, 'labels_printed': 6, 'messages_trashed': 12, 'files_cleaned': 6, 'dry_run': True}
+2026-02-02 08:48:29 - src.services.database - INFO - Ended pipeline run 6: 6 processed, 2 failed
+2026-02-02 12:23:54 - src.logging_config - INFO - ============================================================
+2026-02-02 12:23:54 - src.logging_config - INFO - VintedOS Logging Initialized
+2026-02-02 12:23:54 - src.logging_config - INFO - Log Level: INFO
+2026-02-02 12:23:54 - src.logging_config - INFO - Console Handler: True
+2026-02-02 12:23:54 - src.logging_config - INFO - File Handler: True
+2026-02-02 12:23:54 - src.logging_config - INFO - ============================================================
+2026-02-02 12:23:56 - src.main - INFO - Initializing VintedOS Pipeline
+2026-02-02 12:23:56 - src.services.database - INFO - Running in DEMO mode - using demo database
+2026-02-02 12:23:56 - src.services.database - INFO - Database engine initialized: demo_db.db
+2026-02-02 12:23:56 - src.services.database - INFO - Database tables created/verified
+2026-02-02 12:23:56 - src.services.database - INFO - WAL mode enabled successfully
+2026-02-02 12:23:56 - src.services.printer - INFO - Dry-run mode enabled. PDFs will be saved to: logs/print_debug
+2026-02-02 12:23:56 - src.services.database - INFO - Started pipeline run 1
+2026-02-02 12:23:56 - src.main - INFO - Pipeline initialized (dry_run=True, demo_mode=True, run_id=1)
+2026-02-02 12:23:56 - src.main - INFO - ============================================================
+2026-02-02 12:23:56 - src.main - INFO - Starting VintedOS ETL Pipeline
+2026-02-02 12:23:56 - src.main - INFO - ============================================================
+2026-02-02 12:23:56 - src.main - INFO - 
+=== Step 1: Processing Return Forms ===
+2026-02-02 12:23:56 - src.services.gmail - INFO - Initializing Gmail API service
+2026-02-02 12:23:56 - src.services.gmail - INFO - Starting OAuth flow
+2026-02-02 12:23:56 - src.main - ERROR - Pipeline failed with error: Credentials file not found: credentials.json
+Download from Google Cloud Console
+Traceback (most recent call last):
+  File "/Users/nickhunt/Desktop/portfolioprojs/vinted-os-db/src/main.py", line 172, in run
+    return_forms_data = self._fetch_and_parse_return_forms()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nickhunt/Desktop/portfolioprojs/vinted-os-db/src/main.py", line 252, in _fetch_and_parse_return_forms
+    attachments = self.gmail.fetch_attachments_with_pattern(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nickhunt/Desktop/portfolioprojs/vinted-os-db/src/services/gmail.py", line 169, in fetch_attachments_with_pattern
+    service = self.get_service()
+              ^^^^^^^^^^^^^^^^^^
+  File "/Users/nickhunt/Desktop/portfolioprojs/vinted-os-db/src/services/gmail.py", line 121, in get_service
+    raise FileNotFoundError(
+FileNotFoundError: Credentials file not found: credentials.json
+Download from Google Cloud Console
+2026-02-02 12:23:56 - src.services.database - INFO - Ended pipeline run 1: 0 processed, 0 failed
+2026-02-02 12:24:26 - src.logging_config - INFO - ============================================================
+2026-02-02 12:24:26 - src.logging_config - INFO - VintedOS Logging Initialized
+2026-02-02 12:24:26 - src.logging_config - INFO - Log Level: INFO
+2026-02-02 12:24:26 - src.logging_config - INFO - Console Handler: True
+2026-02-02 12:24:26 - src.logging_config - INFO - File Handler: True
+2026-02-02 12:24:26 - src.logging_config - INFO - ============================================================

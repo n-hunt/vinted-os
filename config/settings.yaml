@@ -1,0 +1,235 @@
+# VintedOS Configuration File
+# All hardcoded values extracted for maintainability
+
+# ============================================================
+# DATABASE SETTINGS
+# ============================================================
+database:
+  filename: "vinted_os.db"
+  demo_filename: "demo_db.db"  # Used when running in demo mode
+  echo_sql: false  # keep false to reduce console noise
+
+# ============================================================
+# PRINTER SETTINGS
+# ============================================================
+printer:
+  name: "Zebra_GK420d"
+  options:
+    fit_to_page: true
+    darkness: 30
+  delay_between_jobs: 0.5  # seconds
+
+# ============================================================
+# IMAGE PROCESSING SETTINGS
+# ============================================================
+image_processing:
+  binarization_threshold: 200  # Pixel threshold for black/white conversion
+  dpi: 203  # Resolution for PDF -> Image conversion
+  crop_margin: 10  # Pixels to add around detected content
+  
+  # PDF dimensions (in inches)
+  page_size:
+    width: 4.0
+    height: 6.0
+  
+  scaled_label_size:
+    width: 3.8
+    height: 5.5
+    scale_factor: 0.95
+  
+  positioning:
+    x_offset_calc: "center"  # (4 - 3.8) / 2
+    y_offset: 0.15  # Top margin in inches
+    
+  text_overlay:
+    transaction_id:
+      font: "Helvetica-Bold"
+      size: 7
+      x_position: 0.1
+      y_position: 0.20
+    
+    item_text:
+      font: "Helvetica"
+      size: 7
+      x_position: 0.1
+      y_position: 0.05
+      max_length: 55
+      truncate_suffix: "..."
+  
+  multi_item_list:
+    items_per_page: 20
+    title:
+      font: "Helvetica-Bold"
+      size: 12
+      x_position: 0.2
+      y_position: 5.7
+    line:
+      x1: 0.2
+      y1: 5.55
+      x2: 3.8
+      y2: 5.55
+    item:
+      font: "Helvetica"
+      size: 9
+      x_position: 0.3
+      price_x_position: 3.7
+      y_start: 5.3
+      y_spacing: 0.25
+      name_max_length: 35
+      name_truncate_length: 32
+
+# ============================================================
+# REGEX PATTERNS
+# ============================================================
+patterns:
+  # Transaction ID extraction from PDF text
+  transaction_id_text: 'Transaction ID:\s*(\d+)'
+  
+  # Transaction ID extraction from filename
+  transaction_id_filename: '(\d{10,})'
+  
+  # Price matching in GBP
+  price: '£(\d+\.\d{2})$'
+  
+  # Attachment filename patterns
+  return_form: '^Order-return-form'
+  shipping_label: '^Vinted-(?:Label|Digital-Label)'
+  
+  # PDF parsing markers
+  order_section_start: 'Order Return code Price'
+  order_section_end:
+    - 'Total:'
+    - 'Return codes'
+  
+  # Keywords to exclude from item names
+  excluded_keywords:
+    - 'shipping'
+    - 'buyer protection'
+    - 'total'
+    - 'return codes'
+
+# ============================================================
+# GMAIL API SETTINGS
+# ============================================================
+gmail:
+  scopes:
+    - "https://www.googleapis.com/auth/gmail.modify"
+  
+  batch_uri: "https://gmail.googleapis.com/batch/gmail/v1"
+  
+  queries:
+    return_forms: "has:attachment filename:pdf"
+    shipping_labels: "has:attachment filename:pdf subject:'shipping label'"
+  
+  credentials:
+    file: "credentials.json"
+    token_file: "token.json"
+    oauth_port: 8080
+
+# ============================================================
+# FILE PATHS
+# ============================================================
+paths:
+  labels_output: "./static/services/labels"
+  logs: "./logs"
+  database: "./data/vintedos.db"
+  
+  # Filename templates
+  templates:
+    coupled_label: "{transaction_id}_{original_filename}"
+    multi_item_list: "{transaction_id}_YOINKED_PAGE_{page_num}.pdf"
+
+# ============================================================
+# LOGGING CONFIGURATION
+# ============================================================
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR, CRITICAL
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  date_format: "%Y-%m-%d %H:%M:%S"
+  
+  handlers:
+    console:
+      enabled: true
+      level: "INFO"
+    
+    file:
+      enabled: true
+      level: "DEBUG"
+      filename: "vintedos.log"
+      max_bytes: 10485760  # 10MB
+      backup_count: 5
+
+# ============================================================
+# PROCESSING SETTINGS
+# ============================================================
+processing:
+  fault_tolerance:
+    continue_on_error: true
+    max_retries: 3
+    retry_delay: 2  # seconds
+  
+  batch_processing:
+    enabled: true
+    chunk_size: 50
+  
+  # Multi-item order threshold
+  multi_item_threshold: 1  # Orders with > 1 item get additional list PDF
+
+# ============================================================
+# AI AGENT SETTINGS
+# ============================================================
+agent:
+  # LLM Configuration
+  llm:
+    provider: "google"  # "google" or "openai"
+    model: "gemini-1.5-flash"  # "gemini-1.5-flash" or "gemini-1.5-pro"
+    temperature: 0.1
+    max_tokens: 2048
+    api_key_env: "GEMINI_API_KEY"  # Environment variable name
+  
+  # Embedding Configuration
+  embeddings:
+    provider: "google"
+    model: "models/text-embedding-004"  # 768 dimensions
+    dimension: 768
+    api_key_env: "GEMINI_API_KEY"
+    batch_size: 100  # Embeddings per API call
+  
+  # Vector Database (Qdrant)
+  vector_db:
+    path: "./data/qdrant_data"  # Local storage path
+    collection_name: "vintedos_knowledge"
+    distance_metric: "cosine"  # "cosine", "euclidean", "dot"
+    
+    # Collection configurations
+    collections:
+      markdown:
+        name: "md_chunks"
+        description: "Knowledge base markdown documentation"
+      logs:
+        name: "log_chunks"
+        description: "Operational log entries"
+  
+  # BM25 Configuration
+  bm25:
+    k1: 1.5  # Term frequency saturation parameter
+    b: 0.75  # Length normalization parameter
+    index_path: "./data/bm25_index.pkl"
+  
+  # Hybrid Search
+  hybrid_search:
+    vector_weight: 0.7  # Weight for semantic search (0-1)
+    bm25_weight: 0.3    # Weight for keyword search (0-1)
+    top_k: 10           # Results per search method before fusion
+    rrf_k: 60           # Reciprocal Rank Fusion constant
+  
+  # Knowledge Base
+  knowledge_base:
+    md_dir: "./data/demo_knowledge_base"
+    log_pattern: "**/*.log"
+    update_on_startup: false  # Re-index on agent startup
+    
+  # Query Processing
+  query:
+    max_context_chunks: 5  # Max chunks to include in LLM context
+    min_relevance_score: 0.3  # Filter chunks below this score

@@ -1,0 +1,280 @@
+# VintedOS
+
+**AI-Powered Database Query Assistant with RAG and Hybrid Retrieval**
+
+## Overview
+
+VintedOS is an intelligent database query assistant that combines Retrieval-Augmented Generation (RAG), function calling, and agentic workflows to help users interact with their Vinted transaction database using natural language. The system features hybrid retrieval (BM25 + vector search), automated indexing pipelines, and context-aware SQL generation.
+
+## Key Features
+
+- **Natural Language Queries**: Ask questions in plain English about your Vinted data
+- **Hybrid Retrieval**: Combines BM25 sparse retrieval with dense vector embeddings for optimal context retrieval
+- **Agentic Architecture**: LangGraph-powered agent with tool calling and ReAct reasoning
+- **Automated Indexing**: Background pipeline for processing markdown documentation and log files
+- **Gmail Integration**: ETL service to extract Vinted transaction data from Gmail PDFs
+- **Label Printing**: Automated shipping label processing and printing
+- **SQLite Database**: Local-first data storage with zero setup required
+
+## Architecture
+
+### Core Components
+
+1. **Agent Layer** (`src/agent/`)
+   - ReAct-based agent with LLM routing and tool selection
+   - Memory management for conversation context
+   - Function calling for database queries and retrieval
+
+2. **Retrieval System** (`src/agent/retrieval/`)
+   - Hybrid retriever combining BM25 and Qdrant vector search
+   - Markdown and log file embeddings
+   - Reciprocal Rank Fusion for result merging
+
+3. **Indexing Pipeline** (`src/agent/indexing/`)
+   - LangGraph-based pipeline for automated document processing
+   - Incremental updates with file change tracking
+   - Preprocessors for markdown and log files
+
+4. **ETL Service** (`src/services/`)
+   - Gmail API integration for PDF extraction
+   - Database management with SQLModel
+   - Label printing with image processing
+
+## Project Structure
+
+```
+vinted-os-db/
+├── src/
+│   ├── agent/
+│   │   ├── core/              # Agent, LLM client, ReAct loop
+│   │   ├── retrieval/         # Hybrid retrieval, embeddings, vector store
+│   │   ├── indexing/          # LangGraph indexing pipeline
+│   │   └── tools/             # Query tools, SQL validator, formatters
+│   ├── services/              # Database, Gmail, printer services
+│   ├── docuflow/              # PDF parsing and vision processing
+│   └── config_loader.py       # Configuration management
+├── config/
+│   └── settings.yaml          # Main configuration file
+├── data/
+│   ├── bm25_indexes/          # Sparse retrieval indexes
+│   ├── qdrant_data/           # Vector database storage
+│   ├── preprocessed_chunks/   # Processed document chunks
+│   └── conversations/         # Agent conversation history
+├── tests/                     # Unit and integration tests
+├── requirements.txt           # Python dependencies
+├── pyproject.toml            # Package configuration
+└── README.md                 # This file
+```
+
+## Installation
+
+### Prerequisites
+
+- Python 3.10 or higher
+- Poppler (required for PDF processing)
+  - macOS: `brew install poppler`
+  - Linux: `apt-get install poppler-utils`
+  - Windows: Download from [poppler releases](https://github.com/oschwartz10612/poppler-windows/releases/)
+
+### Quick Start
+
+```bash
+# Clone the repository
+git clone <repository-url>
+cd vinted-os-db
+
+# Create and activate virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install package in editable mode (recommended)
+pip install -e .
+
+# Or install dependencies only
+pip install -r requirements.txt
+```
+
+### Gmail API Setup (Required for ETL Service)
+
+To use the Gmail integration for extracting Vinted transaction data:
+
+1. **Obtain Gmail API Credentials**
+   - Go to [Google Cloud Console](https://console.cloud.google.com/)
+   - Create a new project or select existing one
+   - Enable the Gmail API
+   - Create OAuth 2.0 credentials (Desktop app)
+   - Download the credentials file as `credentials.json`
+
+2. **Place Credentials in Project Root**
+   ```bash
+   # Move downloaded file to project root
+   cp ~/Downloads/credentials.json /path/to/vinted-os-db/
+   ```
+
+3. **Generate Authentication Token**
+   ```bash
+   # Run the Gmail quickstart script
+   python gmailquickstart.py
+   ```
+   - A browser window will open for OAuth authentication
+   - Sign in with your Google account
+   - Grant the requested permissions
+   - The script will generate `token.json` in the project root
+
+4. **Verify Setup**
+   ```bash
+   # The token.json file should now exist
+   ls token.json
+   ```
+
+**Note**: Both `credentials.json` and `token.json` are excluded from version control for security. Never commit these files to a repository.
+
+### Configuration
+
+Edit `config/settings.yaml` to customize:
+
+- **LLM Settings**: Model selection (Gemini/OpenAI), temperature, token limits
+- **Retrieval Settings**: Top-k results, alpha for hybrid fusion, chunk sizes
+- **Database Settings**: SQLite filename, echo SQL queries
+- **Printer Settings**: Printer name, DPI, darkness, page dimensions
+- **Gmail API**: Query filters, credential paths, scopes
+- **File Paths**: Output directories, cache locations
+
+## Usage
+
+### Running the Agent
+
+```bash
+# Start the interactive agent
+python run.py
+
+# Example queries:
+# - "Show me all transactions from last month"
+# - "What's the total revenue this year?"
+# - "Find all items with status 'shipped'"
+```
+
+### ETL Service (Gmail Integration)
+
+```bash
+# Dry-run mode (saves PDFs to logs/print_debug/ instead of printing)
+python run.py --dry-run
+
+# Production mode (actual printing)
+python run.py
+```
+
+### Indexing Pipeline
+
+```bash
+# Run the indexing pipeline to process markdown and log files
+python -m src.agent.indexing.graph
+```
+
+The indexing pipeline:
+- Scans `data/demo_knowledge_base/` for markdown files
+- Processes log files from `logs/`
+- Creates BM25 indexes and vector embeddings
+- Stores results in `data/bm25_indexes/` and `data/qdrant_data/`
+
+## Database
+
+### Automatic Setup
+
+The SQLite database is created automatically on first run. No installation or configuration required.
+
+### Database Files
+
+When the application is running, you may see three files:
+- `vinted_os.db` - Main database file
+- `vinted_os.db-wal` - Write-Ahead Log (do not delete while running)
+- `vinted_os.db-shm` - Shared memory file (do not delete while running)
+
+The WAL and SHM files merge automatically when the database is idle.
+
+### Viewing Data
+
+Use [DB Browser for SQLite](https://sqlitebrowser.org/) to inspect the database.
+
+**Key Tables:**
+- `transactions` - Vinted transaction records with items and status
+- `gmail_messages` - Links to original Gmail messages
+- `print_jobs` - Label printing history
+- `processing_logs` - ETL pipeline audit trail
+- `pipeline_runs` - Execution statistics
+
+## Development
+
+### Running Tests
+
+```bash
+# Run all tests
+pytest tests/
+
+# Run specific test file
+python tests/test_hybrid_retrieval.py
+python tests/test_agent_orchestrator.py
+
+# Run with verbose output
+pytest tests/ -v
+```
+
+### Project Dependencies
+
+The project uses several key libraries:
+
+- **LangChain & LangGraph**: Agent orchestration and workflows
+- **Qdrant**: Vector database for embeddings
+- **Google Gemini API**: LLM for generation and reasoning
+- **SQLModel**: Database ORM and schema validation
+- **Pydantic**: Data validation and settings management
+- **BM25**: Sparse retrieval for keyword matching
+
+### Environment Variables
+
+Create a `.env` file in the project root for API keys:
+
+```bash
+GOOGLE_API_KEY=your_gemini_api_key_here
+OPENAI_API_KEY=your_openai_api_key_here  # Optional
+```
+
+The `.env` file is excluded from version control.
+
+## Features in Detail
+
+### Hybrid Retrieval
+
+The system combines two retrieval methods:
+
+1. **BM25 (Sparse Retrieval)**: Keyword-based matching for exact term searches
+2. **Vector Search (Dense Retrieval)**: Semantic similarity using embeddings
+
+Results are merged using Reciprocal Rank Fusion (RRF) for optimal relevance.
+
+### Agentic Pipeline
+
+The agent uses a ReAct (Reasoning + Acting) loop:
+
+1. **Observe**: Receive user query and context
+2. **Think**: Reason about what tools to use
+3. **Act**: Execute tool calls (database queries, retrieval)
+4. **Respond**: Generate natural language response
+
+### Automated Indexing
+
+The LangGraph-based indexing pipeline:
+
+- Monitors files for changes using MD5 checksums
+- Preprocesses markdown files into structured chunks
+- Cleans and chunks log files
+- Generates embeddings and BM25 indexes
+- Supports incremental updates (only processes changed files)
+
+## License
+
+[Add your license here]
+
+## Contact
+
+[Add contact information here]

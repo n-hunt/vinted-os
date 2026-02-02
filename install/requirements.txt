@@ -1,0 +1,67 @@
+# VintedOS Dependencies
+# Generated from pyproject.toml
+# For installation, use: pip install -e .
+# Or for pip-based install: pip install -r install/requirements.txt
+
+# Core dependencies
+pydantic>=2.0
+pyyaml>=6.0
+numpy>=1.24.0
+
+# LLM & AI
+langchain>=0.1.0
+langchain-core>=0.1.0
+langchain-google-genai>=0.0.5
+langchain-text-splitters>=0.0.1
+langchain-community>=0.0.1
+langchain-openai>=0.0.1
+google-genai>=1.0.0
+google-generativeai>=0.1.0
+
+# LangGraph
+langgraph>=0.1.0
+langgraph-checkpoint>=1.0.0
+
+# OpenAI (optional, for future support)
+openai>=1.0.0
+tiktoken>=0.5.0
+
+# Vector store & retrieval
+qdrant-client>=1.7.0
+
+# Database
+sqlmodel>=0.0.14
+sqlalchemy>=2.0.0
+
+# PDF processing
+pdfplumber>=0.10.0
+pdfminer.six>=20221105
+pdf2image>=1.16.0
+Pillow>=10.0.0
+PyPDF2>=3.0.0
+reportlab>=4.0.0
+
+# Gmail API
+google-api-python-client>=2.0.0
+google-auth>=2.0.0
+google-auth-httplib2>=0.1.0
+google-auth-oauthlib>=1.0.0
+
+# Data processing & ML
+pandas>=2.0.0
+scikit-learn>=1.0.0
+networkx>=3.0
+anytree>=2.9.0
+
+# Text processing
+ftfy>=6.0.0
+markdown>=3.4.0
+
+# Utilities
+requests>=2.31.0
+httpx>=0.24.0
+python-dotenv>=1.0.0
+
+# Development (optional)
+pytest>=7.0.0
+pytest-cov>=4.0.0
