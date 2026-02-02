@@ -80,12 +80,12 @@ jupyter notebook demos/demo_rag_showcase.ipynb
 
 The notebook provides a comprehensive guided tour of the RAG system's capabilities.
 
-**Option 3: ETL Pipeline**
+**Option 3: ETL Pipeline // WIP: DEMO NEEDS NON-PROPRIETARY LABELS; NOT SOURCED YET**
 ```bash
 # Initialize demo database (first time only)
 python tests/init_demo_db.py
 
-# Run the ETL pipeline in demo mode
+# Run the ETL pipeline in demo mode (DOES NOT WORK YET)
 python etl_pipeline.py --demo
 ```
 
@@ -111,7 +111,6 @@ To run the ETL pipeline with real Gmail data, you need to set up Gmail API crede
    python etl_pipeline.py
    ```
 
-**Note**: Demo mode (`--demo`) works without Gmail credentials but still requires the Gemini API key.
 
 ---
 
