@@ -91,25 +91,7 @@ python etl_pipeline.py --demo
 
 ---
 
-## Production Setup
-
-### 1. Configure API Key
-
-The system requires a Google Gemini API key for LLM and embeddings:
-
-```bash
-# Copy the example environment file
-cp .env.example .env
-```
-
-Edit `.env` and add your API key:
-```bash
-GEMINI_API_KEY=your_actual_api_key_here
-```
-
-Get your API key from: [Google AI Studio](https://aistudio.google.com/app/apikey)
-
-### 2. Gmail API Setup (Optional - for ETL pipeline)
+## Gmail API Setup (Optional - for ETL pipeline)
 
 To run the ETL pipeline with real Gmail data, you need to set up Gmail API credentials:
 
