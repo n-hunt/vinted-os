@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """
-VintedOS Setup Script
+"""VintedOS Configuration Script
 
 Quick setup for API credentials.
 Usage:
-    python setup.py                           # Interactive mode
-    python setup.py --api-key YOUR_KEY        # Direct mode
-    python setup.py --model MODEL_NAME        # Change LLM model
+    python configure.py                           # Interactive mode
+    python configure.py --api-key YOUR_KEY        # Direct mode
+    python configure.py --model MODEL_NAME        # Change LLM model
 """
 
 import argparse
@@ -164,10 +164,10 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  python setup.py                                    # Interactive mode
-  python setup.py --api-key YOUR_KEY                 # Direct mode
-  python setup.py --api-key YOUR_KEY --force         # Overwrite existing
-  python setup.py --model gemini-2.5-flash           # Change LLM model
+  python configure.py                                    # Interactive mode
+  python configure.py --api-key YOUR_KEY                 # Direct mode
+  python configure.py --api-key YOUR_KEY --force         # Overwrite existing
+  python configure.py --model gemini-2.5-flash           # Change LLM model
         """
     )
     

@@ -182,7 +182,7 @@ agent:
   # LLM Configuration
   llm:
     provider: "google"  # "google" or "openai"
-    model: "gemini-3-flash-preview"  # Default: gemini-3-flash-preview (use setup.py --model to change)
+    model: "gemini-3-flash-preview"  # Default: gemini-3-flash-preview (use configure.py --model to change)
     temperature: 0.1
     max_tokens: 2048
     api_key_env: "GEMINI_API_KEY"  # Environment variable name

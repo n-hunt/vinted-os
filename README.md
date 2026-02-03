@@ -37,12 +37,12 @@ conda activate vinted-os
 
 **Quick setup (recommended):**
 ```bash
-python setup.py --api-key YOUR_GEMINI_API_KEY
+python configure.py --api-key YOUR_GEMINI_API_KEY
 ```
 
 **Or interactive mode:**
 ```bash
-python setup.py
+python configure.py
 ```
 
 **Manual setup:**
@@ -55,7 +55,7 @@ Get a free API key from: [Google AI Studio](https://aistudio.google.com/app/apik
 
 **Optional: Change LLM Model**
 ```bash
-python setup.py --model gemini-2.5-flash   # Switch to different model
+python configure.py --model gemini-2.5-flash   # Switch to different model
 ```
 
 Default model is `gemini-3-flash-preview`. Other options: `gemini-2.5-flash`, `gemini-2.5-pro`, `gemini-1.5-flash`, etc.
