@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-"""VintedOS Configuration Script
+VintedOS Configuration Script
 
 Quick setup for API credentials.
 Usage:
